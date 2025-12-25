@@ -3,10 +3,15 @@ import { Button, Text, TouchableOpacity, View } from "react-native";
 import CircleRoundedIcon from "@mui/icons-material/CircleRounded";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import { heroStyles } from "./styles";
+import useDimensions from "../common/dimensions";
 
 export default function HeroContainer() {
+  const dimensions = useDimensions();
+  const screenWidth = dimensions.window.width;
+  const isSmallScreen = screenWidth < 720;
+
   return (
-    <View style={heroStyles.mainView}>
+    <View style={isSmallScreen ? heroStyles.mobileView : heroStyles.mainView}>
       <View style={heroStyles.banner}>
         <CircleRoundedIcon width={4} height={4} sx={{ color: "#3ab7a6" }} />
         <Text style={heroStyles.bannerText}>
@@ -14,23 +19,35 @@ export default function HeroContainer() {
         </Text>
       </View>
       <View>
-        <Text style={heroStyles.heroText}>Excel in Your Medical Exams</Text>
+        <Text
+          style={
+            isSmallScreen ? heroStyles.heroTextMobile : heroStyles.heroText
+          }
+        >
+          Excel in Your Medical Exams
+        </Text>
       </View>
       <View style={heroStyles.subView}>
-        <Text style={heroStyles.subText}>
+        <Text
+          style={isSmallScreen ? heroStyles.subTextMobile : heroStyles.subText}
+        >
           Connect with expert medical tutors and access comprehensive study
           resources designed specifically for HPAT, UCAT and medical board
           examinations.
         </Text>
       </View>
-      <View style={heroStyles.buttonsView}>
+      <View
+        style={
+          isSmallScreen ? heroStyles.buttonsMobileView : heroStyles.buttonsView
+        }
+      >
         <TouchableOpacity
           style={[
             {
               backgroundColor: "#3A5EF2",
               borderColor: "#3A5EF2",
             },
-            heroStyles.button,
+            isSmallScreen ? heroStyles.buttonMobile :heroStyles.button,
           ]}
         >
           <Text style={heroStyles.buttonText1}>Start Learning Today</Text>

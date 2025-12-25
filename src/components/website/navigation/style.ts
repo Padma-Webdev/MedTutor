@@ -28,6 +28,14 @@ export const styles = StyleSheet.create({
     flex: 0.15,
     marginLeft: "5%",
   },
+  smallScreenHeader: {
+    flex: 0.1,
+    flexDirection: "row",
+    marginTop: 17,
+    marginLeft: "40%",
+    justifyContent: "flex-end",
+    width: "10%",
+  },
   /** Header Text Menu */
   headerContentSpace: {
     flex: 1,
