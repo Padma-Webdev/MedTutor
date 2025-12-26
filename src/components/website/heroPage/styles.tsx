@@ -16,7 +16,7 @@ export const heroStyles = StyleSheet.create({
   /**Banner Text */
   banner: {
     margin: 10,
-    borderColor: "#203b45",
+    borderColor: "#23CFBB",
     borderWidth: 2,
     borderRadius: 30,
     padding: 10,
@@ -39,14 +39,14 @@ export const heroStyles = StyleSheet.create({
     width: "64%",
     height: "20%",
     justifyContent: "flex-start",
-    marginTop: 10,
+    marginTop: 20,
   },
     buttonsMobileView: {
     flexDirection: "row",
     width: "100%",
     height: "20%",
     justifyContent: "flex-start",
-    marginTop: 15,
+    marginTop: 30,
   },
   button: {
     marginLeft: "4%",
@@ -62,7 +62,7 @@ export const heroStyles = StyleSheet.create({
     // marginLeft: "4%",
     width: "50%",
     borderWidth: 2,
-    height: "85%",
+    height: "75%",
     borderRadius: 18,
     alignItems: "center",
     justifyContent: "center",

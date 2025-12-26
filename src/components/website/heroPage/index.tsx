@@ -13,7 +13,7 @@ export default function HeroContainer() {
   return (
     <View style={isSmallScreen ? heroStyles.mobileView : heroStyles.mainView}>
       <View style={heroStyles.banner}>
-        <CircleRoundedIcon width={4} height={4} sx={{ color: "#3ab7a6" }} />
+        <CircleRoundedIcon width={4} height={4} sx={{ color: "#23CFBB" }} />
         <Text style={heroStyles.bannerText}>
           Trusted by future medical professionals
         </Text>
@@ -59,8 +59,9 @@ export default function HeroContainer() {
             {
               backgroundColor: "#0a1220",
               borderColor: "#c0cad4",
+              marginLeft: 10,
             },
-            heroStyles.button,
+            isSmallScreen ? heroStyles.buttonMobile :heroStyles.button,
           ]}
         >
           <Text style={heroStyles.buttonText2}>Browse Courses </Text>
