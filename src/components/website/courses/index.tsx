@@ -8,7 +8,7 @@ import useDimensions from "../common/dimensions";
 export default function CoursesContainer() {
   const dimensions = useDimensions();
   const screenWidth = dimensions.window.width;
-  const isSmallScreen = screenWidth < 720;
+  const isSmallScreen = screenWidth < 740;
 
   const courseTile = (item: any, index: any) => {
     return (

@@ -8,7 +8,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 export default function Navigation() {
   const dimensions = useDimensions();
   const screenWidth = dimensions.window.width;
-  const isSmallScreen = screenWidth < 720;
+  const isSmallScreen = screenWidth < 740;
 
   return (
     <View>

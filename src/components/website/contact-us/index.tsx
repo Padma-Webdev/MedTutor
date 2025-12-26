@@ -2,13 +2,12 @@ import { View, Text } from "react-native";
 import { courseStyles } from "../courses/styles";
 import { contactStyles } from "./styles";
 import useDimensions from "../common/dimensions";
-import { LinearGradient } from "expo-linear-gradient";
-import { styles } from "../navigation/style";
+import { Mail, Phone } from "lucide-react";
 
 export default function ContactUsContainer() {
   const dimensions = useDimensions();
   const screenWidth = dimensions.window.width;
-  const isSmallScreen = screenWidth < 720;
+  const isSmallScreen = screenWidth < 740;
   return (
     <View
       style={
@@ -28,72 +27,140 @@ export default function ContactUsContainer() {
         </Text>
       </View>
       <View
-        style={{
-          width: "55%",
-          height: "40%",
-          marginTop: 20,
-          flexDirection: "row",
-          alignSelf: "center",
-          justifyContent: "space-between",
-        }}
+        style={
+          isSmallScreen
+            ? {
+                width: "90%",
+                height: "37%",
+                marginTop: 20,
+                flexDirection: "row",
+                alignSelf: "center",
+                justifyContent: "space-between",
+              }
+            : {
+                width: "35%",
+                height: "37%",
+                marginTop: 20,
+                flexDirection: "row",
+                alignSelf: "center",
+                justifyContent: "space-between",
+              }
+        }
       >
         <View
           style={{
             backgroundColor: "#0F1727",
-            width: "30%",
+            width: "48%",
             borderRadius: 15,
             borderWidth: 2,
             borderColor: "#06443e",
           }}
         >
-          <LinearGradient
+          <View
             style={{
-              flex: 1,
-              borderRadius: 15,
+              margin: "7%",
             }}
-            colors={["#091121", "#112e36"]}
-            start={{ x: 0, y: 0 }}
-            end={{ x: 1, y: 1 }}
-          ></LinearGradient>
+          >
+            <Mail
+              style={{
+                color: "#23CFBB",
+                height: "20%",
+                width: "20%",
+                alignSelf: "flex-start",
+                padding: 4,
+                backgroundColor: "#062421",
+                borderRadius: 10,
+              }}
+            />
+            <Text
+              style={{
+                color: "white",
+                marginTop: 15,
+                fontSize: 22,
+                fontWeight: "400",
+              }}
+            >
+              Email Us
+            </Text>
+            <Text
+              style={{
+                color: "#B1BABA",
+                marginTop: 10,
+                fontSize: 15,
+                fontWeight: "400",
+              }}
+            >
+              Send us an email anytime
+            </Text>
+            <Text
+              style={{
+                color: "#23CFBB",
+                marginTop: 10,
+                fontSize: 17,
+                fontWeight: "400",
+              }}
+            >
+              info@medtutor.co
+            </Text>
+          </View>
         </View>
         <View
           style={{
             backgroundColor: "#0F1727",
-            width: "30%",
+            width: "48%",
             borderRadius: 15,
             borderWidth: 2,
             borderColor: "#06443e",
           }}
         >
-          <LinearGradient
+          <View
             style={{
-              flex: 1,
-              borderRadius: 15,
+              // backgroundColor: "red",
+              margin: "7%",
             }}
-            colors={["#091121", "#112e36"]}
-            start={{ x: 0, y: 0 }}
-            end={{ x: 1, y: 1 }}
-          ></LinearGradient>
-          
-        </View>
-        <View
-          style={{
-            backgroundColor: "#0F1727",
-            width: "30%",
-            borderRadius: 15,
-            borderWidth: 2,
-            borderColor: "#06443e",
-          }}
-        >
-          <LinearGradient
-            style={{
-              flex: 1,
-              borderRadius: 15,
-            }}
-            colors={["#091121", "#112e36"]}
-            start={{ x: 0, y: 0 }}
-            end={{ x: 1, y: 1 }}
-          ></LinearGradient>
+          >
+            <Phone
+              style={{
+                color: "#23CFBB",
+                height: "20%",
+                width: "20%",
+                alignSelf: "flex-start",
+                padding: 4,
+                backgroundColor: "#062421",
+                borderRadius: 10,
+              }}
+            />
+            <Text
+              style={{
+                color: "white",
+                marginTop: 15,
+                fontSize: 22,
+                fontWeight: "400",
+              }}
+            >
+              Call Us
+            </Text>
+            <Text
+              style={{
+                color: "#B1BABA",
+                marginTop: 10,
+                fontSize: 15,
+                fontWeight: "400",
+              }}
+            >
+              Mon-Fri from 8am to 6pm
+            </Text>
+            <Text
+              style={{
+                color: "#23CFBB",
+                marginTop: 10,
+                fontSize: 17,
+                fontWeight: "400",
+              }}
+            >
+              +1 (555) 123-4567
+            </Text>
+          </View>
         </View>
       </View>
     </View>
