@@ -60,17 +60,18 @@ export const styles = StyleSheet.create({
   },
 
   reigonalSwitchView: {
-    borderWidth: 1,
-    borderRadius: 10,
+    borderWidth: 0.5,
+    borderRadius: 9,
     width: 100,
     height: 25,
     borderColor: "#c0cad4",
     flexDirection: "row",
+    padding : 1,
     justifyContent: "space-between",
   },
   switchButton: {
     width: "49%",
-    borderRadius: 10,
+    borderRadius: 9,
   },
   activeRegion: {
     width: "49%",
