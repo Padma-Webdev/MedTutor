@@ -13,20 +13,22 @@ import { RoutePath } from "./routes";
 const Stack = createNativeStackNavigator();
 
 const RootStack = () => {
-    let prefix = Linking.createURL("/");
+  let prefix = Linking.createURL("/");
   const linking = {
     prefixes: [prefix],
   };
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName={RoutePath.Home} 
+        initialRouteName={RoutePath.Home}
         screenOptions={{
+          headerShown: true,
+          header: () => <Navigation />,
           headerStyle: { backgroundColor: "transparent" },
-          headerTintColor: "#0d1623",
+          headerTintColor: "white",
           headerTransparent: true,
           headerTitle: "",
-          title:"Medtutor",
+          title: "Medtutor",
         }}
       >
         <Stack.Screen name={RoutePath.Home} component={Home} />
@@ -34,7 +36,7 @@ const RootStack = () => {
         <Stack.Screen name="Hero" component={HeroContainer} />
         <Stack.Screen name="Navigation" component={Navigation} />
         <Stack.Screen name="Contact-us" component={ContactUsContainer} />
-        <Stack.Screen name={RoutePath.HPAT}  component={HPATContainer} />
+        <Stack.Screen name={RoutePath.HPAT} component={HPATContainer} />
       </Stack.Navigator>
     </NavigationContainer>
   );

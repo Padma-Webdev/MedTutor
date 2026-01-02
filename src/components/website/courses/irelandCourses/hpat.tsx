@@ -1,5 +1,6 @@
 import { LinearGradient } from "expo-linear-gradient";
 import React from "react";
+import Navigation from "../../navigation";
 
 export default function HPATContainer() {
   return (
@@ -9,6 +10,7 @@ export default function HPATContainer() {
       start={{ x: 0, y: 0 }}
       end={{ x: 0.5, y: 1 }}
     >
+      <Navigation/>
     </LinearGradient>
   );
 }

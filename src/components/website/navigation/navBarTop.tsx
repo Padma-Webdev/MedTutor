@@ -7,7 +7,7 @@ import { useNavigation } from "@react-navigation/native";
 import { RoutePath } from "../../navigation/routes";
 
 export default function NavigationTop() {
-  const navigation =useNavigation()
+  const navigation = useNavigation();
   const [region, setRegion] = useState(true);
   const regionSwitchROI = () => {
     setRegion(true);
@@ -40,7 +40,9 @@ export default function NavigationTop() {
   const courses = (item: any, index: any) => {
     return (
       <View key={index.toString()}>
-        <TouchableOpacity onPress={() => navigation.navigate(RoutePath.HPAT as never)}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate(RoutePath.HPAT as never)}
+        >
           <Text style={styles.headerText}>{item.title}</Text>
         </TouchableOpacity>
       </View>
@@ -66,17 +68,15 @@ export default function NavigationTop() {
   return (
     <View>
       <View style={styles.headerBackground}>
-        <TouchableOpacity style={styles.logoSpace}>
+        <View style={styles.logoSpace}>
           <Image
             source={require("../../images/logo.png")}
             style={styles.headerLogo}
           />
           <Text style={styles.headerLogoText}>MedTutor</Text>
-        </TouchableOpacity>
-          <View style={styles.headerContentSpace}> {coursesDataSwitch()}</View>
-          <View style={styles.regswitchView}>
-            {regionalSwitch()}
-          </View>
+        </View>
+        <View style={styles.headerContentSpace}> {coursesDataSwitch()}</View>
+        <View style={styles.regswitchView}>{regionalSwitch()}</View>
       </View>
     </View>
   );

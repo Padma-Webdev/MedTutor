@@ -4,8 +4,11 @@ import { styles } from "./style";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { irishCourses, ukCourses } from "../courses/array";
+import { RoutePath } from "../../navigation/routes";
+import { useNavigation } from "@react-navigation/native";
 
 export default function NavigationSide() {
+  const navigation = useNavigation();
   const [region, setRegion] = useState(true);
   const [modalVisible, setModalVisible] = useState(false);
   const show = () => setModalVisible(true);
@@ -41,7 +44,9 @@ export default function NavigationSide() {
   const courses = (item: any, index: any) => {
     return (
       <View style={styles.headerContentSpaceMobile} key={index.toString()}>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => (navigation.navigate(RoutePath.HPAT as never))}
+        >
           <Text style={styles.headerTextMobile}>{item.title}</Text>
         </TouchableOpacity>
       </View>
@@ -67,13 +72,13 @@ export default function NavigationSide() {
   return (
     <>
       <View style={styles.headerBackgroundMobile}>
-        <TouchableOpacity style={styles.logoSpace}>
+        <View style={styles.logoSpace}>
           <Image
             source={require("../../images/logo.png")}
             style={styles.headerLogo}
           />
           <Text style={styles.headerLogoText}>MedTutor</Text>
-        </TouchableOpacity>
+        </View>
         <View style={{ flex: 1 }}>
           <TouchableOpacity style={styles.smallScreenHeader} onPress={show}>
             <MenuIcon width={12} height={10} sx={{ color: "#f8fefe" }} />
