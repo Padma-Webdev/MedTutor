@@ -3,11 +3,13 @@ import { Text, View, Image, TouchableOpacity } from "react-native";
 import { styles } from "./style";
 import useDimensions from "../common/dimensions";
 import MenuIcon from "@mui/icons-material/Menu";
+import { NavigationProp, ParamListBase, useNavigation } from "@react-navigation/native";
 
-export default function Navigation() {
+export default function NavigationTop() {
   const dimensions = useDimensions();
   const screenWidth = dimensions.window.width;
   const isSmallScreen = screenWidth < 740;
+  // const navigation: NavigationProp<ParamListBase>= useNavigation()
 
   const [region, setRegion] = useState(true);
   const regionSwitchROI = () => {
@@ -18,7 +20,6 @@ export default function Navigation() {
   };
 
   useEffect(() => {}, [region]);
-  console.log(region);
 
   const regionalSwitch = () => {
     return (
@@ -43,7 +44,7 @@ export default function Navigation() {
     const country = region;
     return country ? (
       <View style={styles.headerContentSpace}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={(): void => }>
           <Text style={styles.headerText}>HPAT</Text>
         </TouchableOpacity>
         <TouchableOpacity>
