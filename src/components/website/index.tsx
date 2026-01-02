@@ -4,7 +4,6 @@ import { ScrollView, StyleSheet } from "react-native";
 import ContactUsContainer from "./contact-us";
 import CoursesContainer from "./courses";
 import HeroContainer from "./heroPage";
-import NavigationTop from "./navigation/navBarTop";
 import Navigation from "./navigation";
 
 export default function Home() {

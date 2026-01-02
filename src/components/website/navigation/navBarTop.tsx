@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Text, View, Image, TouchableOpacity } from "react-native";
 import { styles } from "./style";
-import { Dimensions } from "react-native";
 
 import { irishCourses, ukCourses } from "../courses/array";
+import { useNavigation } from "@react-navigation/native";
+import { RoutePath } from "../../navigation/routes";
 
 export default function NavigationTop() {
+  const navigation =useNavigation()
   const [region, setRegion] = useState(true);
   const regionSwitchROI = () => {
     setRegion(true);
@@ -38,7 +40,7 @@ export default function NavigationTop() {
   const courses = (item: any, index: any) => {
     return (
       <View key={index.toString()}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate(RoutePath.HPAT as never)}>
           <Text style={styles.headerText}>{item.title}</Text>
         </TouchableOpacity>
       </View>

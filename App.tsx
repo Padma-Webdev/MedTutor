@@ -1,11 +1,9 @@
 import React from "react";
-import { ScrollView, StyleSheet } from "react-native";
-import Home from "./src/components/website";
+import { StyleSheet } from "react-native";
+import RootStack from "./src/components/navigation/RootStack";
 
 export default function App() {
-  return (
-      <Home/>
-  );
+  return <RootStack />;
 }
 
 const styles = StyleSheet.create({
