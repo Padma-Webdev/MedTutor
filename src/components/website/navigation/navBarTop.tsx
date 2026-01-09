@@ -35,7 +35,7 @@ export default function NavigationTop() {
 
   const handleHPATTutoring = () => {
     showHpat(false);
-    showHpatTutor(true);
+    showHpatTutor(!hpatTutor);
     showLeaveCert(false);
     showfreeRes(false);
     showMoreRes(false);
@@ -164,6 +164,15 @@ export default function NavigationTop() {
             <View style={{ marginTop: 2, marginBottom: 2 }}>
               <Text style={styles.headerText}>
                 1:1 & Small Group HPAT Preparation(Online)
+              </Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(RoutePath.WEEKPREP as never)}
+          >
+            <View style={{ marginTop: 2, marginBottom: 2 }}>
+              <Text style={styles.headerText}>
+                2 Days and 8 Week HPAT Preparation Course
               </Text>
             </View>
           </TouchableOpacity>

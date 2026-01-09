@@ -36,7 +36,7 @@ export default function ContactUsContainer() {
             <Mail style={contactStyles.iconStyle} />
             <Text style={contactStyles.titleText}>Email Us</Text>
             <Text style={contactStyles.subTitle}>Send us an email anytime</Text>
-            <Text style={contactStyles.infoText}>info@medtutor.co</Text>
+            <Text style={contactStyles.infoText}>contactus@medtutor.ie</Text>
           </View>
         </View>
         <View style={contactStyles.buttonStyle}>

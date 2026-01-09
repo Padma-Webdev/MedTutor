@@ -5,8 +5,10 @@ import { hpatStyles } from "../HPAT/hpatStyles";
 import { groupStyles } from "./groupPrepStyles";
 import { PersonalisedTutoring } from "./personalCoaching";
 import { SmallGroupTutoring } from "./smallGroup";
+import { TwoDayCourse } from "./twoDay";
+import { EightWeek } from "./eightDay";
 
-export default function GroupPrepContainer() {
+export default function DayPrepContainer() {
   const screenWidth = Dimensions.get("window").width;
   const isSmallScreen = screenWidth < 740;
 
@@ -14,21 +16,22 @@ export default function GroupPrepContainer() {
     return (
       <View>
         <Text style={groupStyles.mainText}>
-          HPAT Tutoring Ireland – 1:1 & Small Group HPAT Preparation (Online)
+          HPAT Preparation Courses – Online HPAT Preparation Ireland
         </Text>
         <Text style={hpatStyles.hpatDesc}>
-          The HPAT (Health Professions Admissions Test) is a key step for
-          students applying to Medicine and Dentistry in Ireland. Success in
-          HPAT requires strong reasoning, judgement, and problem-solving skills
-          under time pressure.
+          Our HPAT preparation courses are designed to help students perform
+          confidently and effectively in the HPAT. All courses are delivered
+          live online, taught by experienced HPAT educators, and focus on exam
+          strategy, reasoning skills, and realistic exam practice.
         </Text>
         <Text style={hpatStyles.hpatDesc2}>
-          MedTutor offers expert-led HPAT tutoring designed to maximise
-          performance, confidence, and exam-day strategy. Choose 1:1 tutoring
-          for fully personalised coaching or Small Group tutoring for structured
-          learning with peer motivation.
+          Whether you are looking for intensive short-term preparation or
+          long-term structured support, our HPAT courses provide everything
+          needed to maximise performance.
         </Text>
-           <Text style={groupStyles.Bookings}>For Bookings: contactus@medtutor.ie</Text>
+        <Text style={groupStyles.Bookings}>
+          For Bookings: contactus@medtutor.ie
+        </Text>
       </View>
     );
   };
@@ -41,11 +44,9 @@ export default function GroupPrepContainer() {
       <View style={groupStyles.topHeader}>{Header()}</View>
       <View style={groupStyles.flexSplit}>
         <View style={groupStyles.personalisedCont}>
-          {PersonalisedTutoring()}
+          {TwoDayCourse()}
         </View>
-        <View style={groupStyles.personalisedCont}>
-          {SmallGroupTutoring()}
-        </View>
+        <View style={groupStyles.personalisedCont}>{EightWeek()}</View>
       </View>
     </ScrollView>
   );

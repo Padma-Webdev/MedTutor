@@ -20,6 +20,7 @@ export const groupStyles = StyleSheet.create({
     color: "#f8fefe",
     marginBottom: 6,
     marginLeft: 25,
+    textDecorationLine: "underline",
   },
   groupBody: {
     fontSize: 15,
@@ -34,6 +35,13 @@ export const groupStyles = StyleSheet.create({
     marginBottom: 10,
     marginLeft: 45,
   },
+    groupBoldCourse: {
+    fontSize: 15,
+    fontWeight: "bold",
+    color: "#f8fefe",
+    marginBottom: 5,
+    marginLeft: 45,
+  },
   groupRegHeader: {
     fontSize: 15,
     color: "#f8fefe",
@@ -41,6 +49,7 @@ export const groupStyles = StyleSheet.create({
     marginLeft: 10,
   },
   topHeader: {
+    marginTop: "-2%",
     width: "75%",
     alignItems: "flex-start",
     alignSelf: "center",
@@ -71,10 +80,31 @@ export const groupStyles = StyleSheet.create({
     marginBottom: 10,
     marginLeft: 40,
   },
-    pricingNextLine: {
+  faqQuestions: {
+    fontSize: 15,
+    fontWeight: "bold",
+    color: "#f8fefe",
+    marginBottom: 2,
+    marginLeft: 40,
+  },
+  Bookings: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "#f8fefe",
+    marginBottom: 2,
+    marginLeft: 40,
+    alignSelf:"center",
+  },
+  faqAnswers: {
     fontSize: 15,
     color: "#f8fefe",
-    marginBottom: 10,
+    marginBottom: 8,
+    marginLeft: 50,
+  },
+  pricingNextLine: {
+    fontSize: 15,
+    color: "#f8fefe",
+    marginBottom: 5,
     marginLeft: 50,
   },
 });

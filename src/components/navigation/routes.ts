@@ -4,4 +4,5 @@ export enum RoutePath {
   HPATDATES = "HPAT-DATES",
   HPATCHANGES = "HPAT-CHANGES",
   GROUPPREP = "GROUP-PREP",
+  WEEKPREP = "WEEK-PREP",
 }
