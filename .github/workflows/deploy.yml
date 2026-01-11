@@ -22,7 +22,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      # 1️⃣ Checkout code
+      # 1️⃣ Checkout repo
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -36,11 +36,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # 4️⃣ Build Expo Web
+      # 4️⃣ Build Expo Web in root dist/
       - name: Build Expo Web
-        run: npx expo export --platform web
+        run: |
+          rm -rf dist
+          npx expo export --platform web --output-dir dist
 
-      # 5️⃣ Verify dist/
+      # 5️⃣ Verify dist/ folder exists
       - name: Verify build output
         run: ls -la dist
 
@@ -54,7 +56,7 @@ jobs:
         with:
           path: dist
 
-      # 8️⃣ Deploy
+      # 8️⃣ Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
