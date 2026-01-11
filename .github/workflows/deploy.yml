@@ -40,9 +40,9 @@ jobs:
       - name: Install Expo CLI
         run: npm install -g expo
 
-      # 5. Build Expo Web and output to dist/
+      # 5. Build Expo Web
       - name: Build Expo Web
-        run: expo export --platform web --output-dir dist --public-url /MedTutor/
+        run: expo export:web --output-dir dist
 
       # 6. Verify build output
       - name: Verify build output

@@ -64,7 +64,7 @@ const RootStack = () => {
         <Stack.Screen name={RoutePath.LEAVINGCERT} component={LeavingCertContainer} />
         <Stack.Screen name={RoutePath.JUNIORCERT} component={JuniorCertificateContainer} />
         {/* Optional catch-all */}
-        <Stack.Screen name="NotFound" component={Home} />
+        {/* <Stack.Screen name="NotFound" component={Home} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
