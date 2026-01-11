@@ -40,24 +40,23 @@ jobs:
       - name: Install Expo CLI
         run: npm install -g expo
 
-            # 5️⃣ Build Expo Web (local CLI compatible)
+      # 5️⃣ Build Expo Web
       - name: Build Expo Web
         run: npx expo export --platform web
 
-
       # 6️⃣ Verify build output
       - name: Verify build output
-        run: ls -la web-build
+        run: ls -la dist
 
       # 7️⃣ Configure GitHub Pages
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # 8️⃣ Upload web-build folder
+      # 8️⃣ Upload Pages artifact
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: web-build
+          path: dist
 
       # 9️⃣ Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
