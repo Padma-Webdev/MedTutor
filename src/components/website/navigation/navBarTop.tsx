@@ -35,8 +35,16 @@ export default function NavigationTop() {
 
   const handleHPATTutoring = () => {
     showHpat(false);
-    showHpatTutor(!hpatTutor);
+    showHpatTutor(true);
     showLeaveCert(false);
+    showfreeRes(false);
+    showMoreRes(false);
+  };
+
+    const handleleavingCert = () => {
+    showHpat(false);
+    showHpatTutor(false);
+    showLeaveCert(true);
     showfreeRes(false);
     showMoreRes(false);
   };
@@ -86,7 +94,7 @@ export default function NavigationTop() {
             <Text style={styles.headerText}>HPAT Tutoring</Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => handleleavingCert()}>
           <View>
             <Text style={styles.headerText}>Leaving Cert Grinds</Text>
           </View>
@@ -176,20 +184,37 @@ export default function NavigationTop() {
               </Text>
             </View>
           </TouchableOpacity>
-          {/* <TouchableOpacity
-            onPress={() => navigation.navigate(RoutePath.HPATDATES as never)}
+        </View>
+      )}
+      {leaveCert && (
+        <View style={styles.JuniorDropDownView}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(RoutePath.LEAVINGCERT as never)}
           >
-            <View style={{ marginTop: 3 }}>
-              <Text style={styles.headerText}>HPAT Dates, Fees & Results</Text>
+            <View style={{ marginTop: 2, marginBottom: 2 }}>
+              <Text style={styles.headerText}>
+                Leaving Certificate
+              </Text>
             </View>
-          </TouchableOpacity> */}
-          {/* <TouchableOpacity
-            onPress={() => navigation.navigate(RoutePath.HPATCHANGES as never)}
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(RoutePath.WEEKPREP as never)}
           >
-            <View style={{ marginTop: 3, marginBottom: 4 }}>
-              <Text style={styles.headerText}>Why MedTutor</Text>
+            <View style={{ marginTop: 2, marginBottom: 2 }}>
+              <Text style={styles.headerText}>
+                Junior Certificate
+              </Text>
             </View>
-          </TouchableOpacity> */}
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(RoutePath.WEEKPREP as never)}
+          >
+            <View style={{ marginTop: 2, marginBottom: 2 }}>
+              <Text style={styles.headerText}>
+                Student Packages
+              </Text>
+            </View>
+          </TouchableOpacity>
         </View>
       )}
     </View>

@@ -35,14 +35,6 @@ export const courseDataTwo = [
 ];
 
 
-// export const irishCourses = [
-//   { title: "HPAT", },
-//   { title: "HPAT Tutoring" },
-//   { title: "Leaving Cert Grinds" },
-//   { title: "Free Resources" },
-//   { title: "More" },
-// ];
-
 export const ukCourses = [
   { title: "UCAS" }, //Needs a drop down of tutoring
   { title: "UCAT" },
