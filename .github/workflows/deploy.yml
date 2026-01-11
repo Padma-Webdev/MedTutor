@@ -22,11 +22,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      # 1️⃣ Checkout repository
+      # 1️⃣ Checkout code
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 2️⃣ Setup Node 20
+      # 2️⃣ Setup Node
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -36,15 +36,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # 4️⃣ Build Expo Web (local CLI compatible)
+      # 4️⃣ Build Expo Web
       - name: Build Expo Web
         run: npx expo export --platform web
 
-      # 5️⃣ Verify build output
+      # 5️⃣ Verify dist/
       - name: Verify build output
         run: ls -la dist
 
-      # 6️⃣ Configure GitHub Pages
+      # 6️⃣ Setup GitHub Pages
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
@@ -54,7 +54,7 @@ jobs:
         with:
           path: dist
 
-      # 8️⃣ Deploy to GitHub Pages
+      # 8️⃣ Deploy
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
