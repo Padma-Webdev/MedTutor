@@ -16,59 +16,15 @@ export const PersonalisedTutoring = () => {
         weaknesses, and timeline—so your preparation is efficient and
         score-focused.
       </Text>
-      <Text style={groupStyles.groupHeader}>What You Get</Text>
-      <View style={{ flexDirection: "row" }}>
-        <Text style={groupStyles.groupBoldHeader}>
-          {"\u2022"} Targeted Support:
-        </Text>
-        <Text style={groupStyles.groupRegHeader}>
-          Focus on your weakest areas while strengthening what you already do
-          well
-        </Text>
-      </View>
-      <View style={{ flexDirection: "row" }}>
-        <Text style={groupStyles.groupBoldHeader}>
-          {"\u2022"} Bespoke Strategies:
-        </Text>
-        <Text style={groupStyles.groupRegHeader}>
-          Proven methods for tackling HPAT question styles quickly and
-          accurately
-        </Text>
-      </View>
-      <View style={{ flexDirection: "row" }}>
-        <Text style={groupStyles.groupBoldHeader}>
-          {"\u2022"} Flexible Scheduling:
-        </Text>
-        <Text style={groupStyles.groupRegHeader}>
-          Sessions arranged to suit your timetable
-        </Text>
-      </View>
-      <View style={{ flexDirection: "row" }}>
-        <Text style={groupStyles.groupBoldHeader}>
-          {"\u2022"} Seamless Process:
-        </Text>
-        <Text style={groupStyles.groupRegHeader}>
-          After booking, a Coordinator matches you with the right tutor and
-          organises sessions
-        </Text>
-      </View>
-      <View style={{ flexDirection: "row" }}>
-        <Text style={groupStyles.groupBoldHeader}>
-          {"\u2022"} Notes Included:
-        </Text>
-        <Text style={groupStyles.groupRegHeader}>
-          We provide notes to support learning, recall, and revision
-        </Text>
-      </View>
-      <Text style={groupStyles.groupHeader}>Pricing - 1:1 HPAT Tutoring</Text>
-      <Text style={groupStyles.pricing}>From €XX per hour</Text>
+      <Text style={groupStyles.groupHeader}>Pricing: </Text>
+      <Text style={groupStyles.pricing}>From €35 per hour</Text>
       <Text style={groupStyles.groupBoldHeader}>Includes:</Text>
-        <Text style={groupStyles.pricingNextLine}>
-          {"\u2022"} Fully personalised 1:1 HPAT tutoring
-        </Text>
-        <Text style={groupStyles.pricingNextLine}>
-          {"\u2022"} Strategy-focused teaching and guided practice
-        </Text>
+      <Text style={groupStyles.pricingNextLine}>
+        {"\u2022"} Fully personalised 1:1 HPAT tutoring
+      </Text>
+      <Text style={groupStyles.pricingNextLine}>
+        {"\u2022"} Strategy-focused teaching and guided practice
+      </Text>
       <Text style={groupStyles.pricingNextLine}>
         {"\u2022"} Notes provided for revision
       </Text>
@@ -78,7 +34,13 @@ export const PersonalisedTutoring = () => {
       <Text style={groupStyles.pricingNextLine}>
         {"\u2022"} Flexible online scheduling
       </Text>
-      <Text style={groupStyles.groupHeader}>FAQs:</Text>
+    </View>
+  );
+};
+
+export const PersonalisedTutoringFAQ = () => {
+  return (
+    <View>
       <Text style={groupStyles.faqQuestions}>
         What is included in 1:1 HPAT tutoring?
       </Text>

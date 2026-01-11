@@ -16,51 +16,10 @@ export const SmallGroupTutoring = () => {
         live online, interactive, and designed to keep students progressing
         consistently.
       </Text>
-      <Text style={groupStyles.groupHeader}>What You Get</Text>
-      <View style={{ flexDirection: "row" }}>
-        <Text style={groupStyles.groupBoldHeader}>
-          {"\u2022"} Interactive Learning:
-        </Text>
-        <Text style={groupStyles.groupRegHeader}>
-          Ask questions, practise strategies, and learn actively
-        </Text>
-      </View>
-      <View style={{ flexDirection: "row" }}>
-        <Text style={groupStyles.groupBoldHeader}>
-          {"\u2022"} Collaborative Environment:
-        </Text>
-        <Text style={groupStyles.groupRegHeader}>
-          Motivation and insight from peers in a focused setting
-        </Text>
-      </View>
-      <View style={{ flexDirection: "row" }}>
-        <Text style={groupStyles.groupBoldHeader}>
-          {"\u2022"} Consistent Preparation:
-        </Text>
-        <Text style={groupStyles.groupRegHeader}>
-          Sessions arranged to suit your timetable
-        </Text>
-      </View>
-      <View style={{ flexDirection: "row" }}>
-        <Text style={groupStyles.groupBoldHeader}>
-          {"\u2022"} Seamless Process:
-        </Text>
-        <Text style={groupStyles.groupRegHeader}>
-          Ongoing preparation to keep you exam-ready and confident
-        </Text>
-      </View>
-      <View style={{ flexDirection: "row" }}>
-        <Text style={groupStyles.groupBoldHeader}>
-          {"\u2022"} Notes Included:
-        </Text>
-        <Text style={groupStyles.groupRegHeader}>
-          We provide notes for revision and structured study
-        </Text>
-      </View>
       <Text style={groupStyles.groupHeader}>
         Pricing – Small Group HPAT Tutoring
       </Text>
-      <Text style={groupStyles.pricing}>€XXX per course / term</Text>
+      <Text style={groupStyles.pricing}>€20 per session</Text>
       <Text style={groupStyles.groupBoldHeader}>Includes:</Text>
       <Text style={groupStyles.pricingNextLine}>
         {"\u2022"} Live online small group sessions (3–5 students)
@@ -77,10 +36,13 @@ export const SmallGroupTutoring = () => {
       <Text style={groupStyles.pricingNextLine}>
         {"\u2022"} Interactive Q&A throughout
       </Text>
-      <Text style={groupStyles.pricingNextLine}>
-        {"\u2022"} Consistent preparation leading up to exam day
-      </Text>
-      <Text style={groupStyles.groupHeader}>FAQs:</Text>
+    </View>
+  );
+};
+
+export const SmallGroupTutoringFAQs = () => {
+  return (
+    <View>
       <Text style={groupStyles.faqQuestions}>
         How many students are in each group?
       </Text>

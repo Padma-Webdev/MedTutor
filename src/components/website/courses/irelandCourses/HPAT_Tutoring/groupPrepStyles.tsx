@@ -49,7 +49,7 @@ export const groupStyles = StyleSheet.create({
     marginLeft: 10,
   },
   topHeader: {
-    marginTop: "-2%",
+    marginTop: "2%",
     width: "75%",
     alignItems: "flex-start",
     alignSelf: "center",
