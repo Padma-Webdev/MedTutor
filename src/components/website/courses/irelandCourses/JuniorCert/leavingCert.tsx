@@ -5,7 +5,7 @@ import { hpatStyles } from "../HPAT/hpatStyles";
 import { groupStyles } from "../HPAT_Tutoring/groupPrepStyles";
 import { JuniorStyles } from "./juinosStyles";
 
-export default function GroupPrepContainer() {
+export default function LeavingCertContainer() {
   const screenWidth = Dimensions.get("window").width;
   const isSmallScreen = screenWidth < 740;
 
@@ -70,14 +70,6 @@ export default function GroupPrepContainer() {
         <BackButton />
       </View>
       <View style={JuniorStyles.topHeader}>{Header()}</View>
-      {/* <View style={groupStyles.flexSplit}>
-        <View style={groupStyles.personalisedCont}>
-          {PersonalisedTutoring()}
-        </View>
-        <View style={groupStyles.personalisedCont}>
-          {SmallGroupTutoring()}
-        </View>
-      </View> */}
     </ScrollView>
   );
 }

@@ -14,6 +14,7 @@ import GroupPrepContainer from "../website/courses/irelandCourses/HPAT_Tutoring/
 import DayPrepContainer from "../website/courses/irelandCourses/HPAT_Tutoring/dayPrep";
 import JuniorCertContainer from "../website/courses/irelandCourses/JuniorCert/leavingCert";
 import LeavingCertContainer from "../website/courses/irelandCourses/JuniorCert/leavingCert";
+import JuniorCertificateContainer from "../website/courses/irelandCourses/JuniorCert/juniorCert";
 
 const Stack = createNativeStackNavigator();
 
@@ -57,6 +58,10 @@ const RootStack = () => {
         <Stack.Screen
           name={RoutePath.LEAVINGCERT}
           component={LeavingCertContainer}
+        />
+        <Stack.Screen
+          name={RoutePath.JUNIORCERT}
+          component={JuniorCertificateContainer}
         />
       </Stack.Navigator>
     </NavigationContainer>
