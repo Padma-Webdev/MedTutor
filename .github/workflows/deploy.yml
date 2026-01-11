@@ -22,43 +22,43 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      # 1. Checkout repository
+      # 1️⃣ Checkout repository
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 2. Setup Node 20
+      # 2️⃣ Setup Node 20
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      # 3. Install dependencies
+      # 3️⃣ Install dependencies
       - name: Install dependencies
         run: npm ci
 
-      # 4. Install Expo CLI globally
+      # 4️⃣ Install Expo CLI globally
       - name: Install Expo CLI
         run: npm install -g expo
 
-      # 5. Build Expo Web
+      # 5️⃣ Build Expo Web
       - name: Build Expo Web
-        run: expo export:web
+        run: expo build:web
 
-      # 6. Verify build output
+      # 6️⃣ Verify build output
       - name: Verify build output
         run: ls -la web-build
 
-      # 7. Configure GitHub Pages
+      # 7️⃣ Configure GitHub Pages
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # 8. Upload dist/ folder
+      # 8️⃣ Upload web-build folder
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: web-build
 
-      # 9. Deploy to GitHub Pages
+      # 9️⃣ Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
