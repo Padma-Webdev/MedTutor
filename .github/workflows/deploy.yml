@@ -42,7 +42,7 @@ jobs:
 
       # 5. Build Expo Web and output to dist/
       - name: Build Expo Web
-        run: expo export --platform web --output-dir dist
+        run: expo export --platform web --output-dir dist --public-url /MedTutor/
 
       # 6. Verify build output
       - name: Verify build output
