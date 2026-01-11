@@ -24,10 +24,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png",
-      "publicPath": "/MedTutor/",
-      "build": {
-        "redirect": true
-      }
+      "publicPath": "/MedTutor/"
     },
     "plugins": [
       "expo-font"
