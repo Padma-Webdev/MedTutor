@@ -22,7 +22,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      # 1️⃣ Checkout code
+      # 1️⃣ Checkout repository
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -36,28 +36,31 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # 4️⃣ Build Expo Web in root dist/
+      # 4️⃣ Build Expo Web
       - name: Build Expo Web
         run: |
           rm -rf dist
           npx expo export --platform web --output-dir dist
 
-      # 5️⃣ Verify dist/ folder exists
+      # 5️⃣ SPA fix: copy index.html to 404.html
+      - name: SPA 404 fallback
+        run: cp dist/index.html dist/404.html
+
+      # 6️⃣ Verify dist/ folder exists
       - name: Verify build output
         run: ls -la dist
 
-      # 6️⃣ Setup GitHub Pages
-      # 6️⃣ Setup GitHub Pages
+      # 7️⃣ Setup GitHub Pages
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # 7️⃣ Upload dist/ folder as Pages artifact
+      # 8️⃣ Upload dist/ folder as artifact
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
 
-      # 8️⃣ Deploy to GitHub Pages
+      # 9️⃣ Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
