@@ -3,9 +3,6 @@ import { Text, View, Image, TouchableOpacity, Platform } from "react-native";
 import { styles } from "./style";
 import { useNavigation } from "@react-navigation/native";
 import { RoutePath } from "../../navigation/routes";
-import logo from "../../../../public/images/logo.png";
-import { ukCourses } from "../courses/array";
-import courses from "../courses";
 
 type PdfLinkProps = {
   label: string;
