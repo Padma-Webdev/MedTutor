@@ -9,24 +9,28 @@ import { PdfLink } from "./navBarTop";
 
 export default function NavigationSide() {
   const isDev = process.env.NODE_ENV === "development";
-const BASE_URL = process.env.PUBLIC_URL || '.' // empty in dev, repo prefix in prod
+  const BASE_URL = process.env.PUBLIC_URL || "."; // empty in dev, repo prefix in prod
   const navigation = useNavigation();
-  // const [region, setRegion] = useState(true);
+  const [region, setRegion] = useState(true);
   const [modalVisible, setModalVisible] = useState(false);
   const show = () => setModalVisible(true);
   const close = () => setModalVisible(false);
-  // const regionSwitchROI = () => {
-  //   setRegion(true);
-  // };
-  // const regionSwitchUK = () => {
-  //   setRegion(false);
-  // };
+  const regionSwitchROI = () => {
+    setRegion(true);
+  };
+  const regionSwitchUK = () => {
+    setRegion(false);
+  };
 
   const [hpat, showHpat] = useState(false);
   const [hpatTutor, showHpatTutor] = useState(false);
   const [leaveCert, showLeaveCert] = useState(false);
   const [freeRes, showfreeRes] = useState(false);
-
+  const [ucat, showUcat] = useState(false);
+  const [personalStatement, showpersonalStatement] = useState(false);
+  const [appStat, showappStat] = useState(false);
+  const [workEx, showWorkEx] = useState(false);
+  const [freeResUK, showfreeResUK] = useState(false);
   const handleOnPress = () => {
     // navigation.navigate(RoutePath.HPAT as never)
     setModalVisible(false);
@@ -56,19 +60,54 @@ const BASE_URL = process.env.PUBLIC_URL || '.' // empty in dev, repo prefix in p
     showfreeRes(false);
     // showMoreRes(false);
   };
-
-  const handleFreeResources = () => {
-    showHpat(false);
-    showHpatTutor(false);
-    showLeaveCert(false);
-    showfreeRes(true);
+  const handleUCAT = () => {
+    showUcat(true);
+    showpersonalStatement(false);
+    showappStat(false);
+    showWorkEx(false);
+    showfreeResUK(false);
   };
+
+  const handlePersonalStatement = () => {
+    showUcat(false);
+    showpersonalStatement(true);
+    showappStat(false);
+    showWorkEx(false);
+    showfreeResUK(false);
+  };
+
+  const handleAppStat = () => {
+    showUcat(false);
+    showpersonalStatement(false);
+    showappStat(true);
+    showWorkEx(false);
+    showfreeResUK(false);
+  };
+
+  const handleWorkEx = () => {
+    showUcat(false);
+    showpersonalStatement(false);
+    showappStat(false);
+    showWorkEx(true);
+    showfreeResUK(false);
+  };
+  // const handleFreeResources = () => {
+  //   showHpat(false);
+  //   showHpatTutor(false);
+  //   showLeaveCert(false);
+  //   showfreeRes(true);
+  // };
 
   useEffect(() => {}, [hpat]);
   useEffect(() => {}, [hpatTutor]);
   useEffect(() => {}, [leaveCert]);
   useEffect(() => {}, [freeRes]);
-  // useEffect(() => {}, [region]);
+  useEffect(() => {}, [ucat]);
+  useEffect(() => {}, [personalStatement]);
+  useEffect(() => {}, [appStat]);
+  useEffect(() => {}, [workEx]);
+  useEffect(() => {}, [freeResUK]);
+  useEffect(() => {}, [region]);
 
   const handleAboutHPat = () => {
     navigation.navigate(RoutePath.ABOUTHPAT as never);
@@ -77,34 +116,25 @@ const BASE_URL = process.env.PUBLIC_URL || '.' // empty in dev, repo prefix in p
 
   useEffect(() => {}, [modalVisible]);
 
-  // const regionalSwitch = () => {
-  //   return (
-  //     <View style={styles.reigonalSwitchView}>
-  //       <TouchableOpacity
-  //         style={region ? styles.activeRegion : styles.switchButton}
-  //         onPress={regionSwitchROI}
-  //       >
-  //         <Text style={styles.buttonText}>🇮🇪 IE</Text>
-  //       </TouchableOpacity>
-  //       <TouchableOpacity
-  //         style={!region ? styles.activeRegion : styles.switchButton}
-  //         onPress={regionSwitchUK}
-  //       >
-  //         <Text style={styles.buttonText}>🇬🇧 UK</Text>
-  //       </TouchableOpacity>
-  //     </View>
-  //   );
-  // };
-
-  const courses = (item: any, index: any) => {
+  const regionalSwitch = () => {
     return (
-      <View style={styles.headerContentSpaceMobile} key={index.toString()}>
-        <TouchableOpacity onPress={() => handleOnPress()}>
-          <Text style={styles.headerTextMobile}>{item.title}</Text>
+      <View style={styles.reigonalSwitchView}>
+        <TouchableOpacity
+          style={region ? styles.activeRegion : styles.switchButton}
+          onPress={regionSwitchROI}
+        >
+          <Text style={styles.buttonText}>🇮🇪 IE</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={!region ? styles.activeRegion : styles.switchButton}
+          onPress={regionSwitchUK}
+        >
+          <Text style={styles.buttonText}>🇬🇧 UK</Text>
         </TouchableOpacity>
       </View>
     );
   };
+
   const displayROICourses = () => {
     return (
       <View style={styles.headerSpaceMobile}>
@@ -175,8 +205,8 @@ const BASE_URL = process.env.PUBLIC_URL || '.' // empty in dev, repo prefix in p
           <View style={{ marginTop: -25, marginLeft: 20 }}>
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate(RoutePath.LEAVINGCERT as never),
-                  setModalVisible(false);
+                (navigation.navigate(RoutePath.LEAVINGCERT as never),
+                  setModalVisible(false));
               }}
             >
               <View style={{ marginTop: 2 }}>
@@ -185,8 +215,8 @@ const BASE_URL = process.env.PUBLIC_URL || '.' // empty in dev, repo prefix in p
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate(RoutePath.JUNIORCERT as never),
-                  setModalVisible(false);
+                (navigation.navigate(RoutePath.JUNIORCERT as never),
+                  setModalVisible(false));
               }}
             >
               <View style={{ marginTop: 10 }}>
@@ -200,7 +230,7 @@ const BASE_URL = process.env.PUBLIC_URL || '.' // empty in dev, repo prefix in p
             <Text style={styles.headerText}>Free Resources</Text>
           </View>
         </TouchableOpacity> */}
-        {freeRes && (
+        {/* {freeRes && (
           <View style={{ marginTop: -25, marginLeft: 20 }}>
             <PdfLink label="Section 1" pdfPath="/pdfs/Section1.pdf" />
             <PdfLink
@@ -212,7 +242,197 @@ const BASE_URL = process.env.PUBLIC_URL || '.' // empty in dev, repo prefix in p
               pdfPath="/pdfs/HPAT_Changes_2027.pdf"
             />
           </View>
+        )} */}
+        {/* <TouchableOpacity>
+          <View>
+            <Text style={styles.headerText}>More</Text>
+          </View>
+        </TouchableOpacity> */}
+      </View>
+    );
+  };
+
+  const displayUKCourses = () => {
+    return (
+      <View style={styles.headerSpaceMobile}>
+        <TouchableOpacity onPress={() => handleUCAT()}>
+          <View>
+            <Text style={styles.headerText}>UCAT</Text>
+          </View>
+        </TouchableOpacity>
+        {ucat && (
+          <View style={{ marginTop: -25, marginLeft: 20 }}>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate(RoutePath.ABOUTHPAT as never);
+                setModalVisible(false);
+              }}
+            >
+              <View style={{ marginTop: 2 }}>
+                <Text style={styles.headerText}>UCAT Tutoring</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate(RoutePath.HPATCHANGES as never);
+                setModalVisible(false);
+              }}
+            >
+              <View style={{ marginTop: 10 }}>
+                <Text style={styles.headerText}>UCAT Courses</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate(RoutePath.HPATCHANGES as never);
+                setModalVisible(false);
+              }}
+            >
+              <View style={{ marginTop: 10 }}>
+                <Text style={styles.headerText}>
+                  UCAT Daily Study Timetable
+                </Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate(RoutePath.HPATCHANGES as never);
+                setModalVisible(false);
+              }}
+            >
+              <View style={{ marginTop: 10 }}>
+                <Text style={styles.headerText}>UCAT Score Calculation</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate(RoutePath.HPATCHANGES as never);
+                setModalVisible(false);
+              }}
+            >
+              <View style={{ marginTop: 10 }}>
+                <Text style={styles.headerText}>UCAT 2025 Stats</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
         )}
+        <TouchableOpacity onPress={() => handlePersonalStatement()}>
+          <View>
+            <Text style={styles.headerText}>Personal Statement</Text>
+          </View>
+        </TouchableOpacity>
+        {personalStatement && (
+          <View style={{ marginTop: -25, marginLeft: 20 }}>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate(RoutePath.GROUPPREP as never);
+                setModalVisible(false);
+              }}
+            >
+              <View style={{ marginTop: 2 }}>
+                <Text style={styles.headerText}>
+                  Personal Statement Guidance
+                </Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate(RoutePath.WEEKPREP as never);
+                setModalVisible(false);
+              }}
+            >
+              <View style={{ marginTop: 10 }}>
+                <Text style={styles.headerText}>Personal Statement Review</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate(RoutePath.WEEKPREP as never);
+                setModalVisible(false);
+              }}
+            >
+              <View style={{ marginTop: 10 }}>
+                <Text style={styles.headerText}>Personal Statement FAQs</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        )}
+        <TouchableOpacity onPress={() => handleAppStat()}>
+          <View>
+            <Text style={styles.headerText}>Application Strategy</Text>
+          </View>
+        </TouchableOpacity>
+        {appStat && (
+          <View style={{ marginTop: -25, marginLeft: 20 }}>
+            <TouchableOpacity
+              onPress={() => {
+                (navigation.navigate(RoutePath.LEAVINGCERT as never),
+                  setModalVisible(false));
+              }}
+            >
+              <View style={{ marginTop: 2 }}>
+                <Text style={styles.headerText}>Selecting 4 Unis</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => {
+                (navigation.navigate(RoutePath.JUNIORCERT as never),
+                  setModalVisible(false));
+              }}
+            >
+              <View style={{ marginTop: 10 }}>
+                <Text style={styles.headerText}>What is UCAS Extra </Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        )}
+        <TouchableOpacity onPress={() => handleWorkEx()}>
+          <View>
+            <Text style={styles.headerText}>Work Experience</Text>
+          </View>
+        </TouchableOpacity>
+        {workEx && (
+          <View style={{ marginTop: -25, marginLeft: 20 }}>
+            <TouchableOpacity
+              onPress={() => {
+                (navigation.navigate(RoutePath.LEAVINGCERT as never),
+                  setModalVisible(false));
+              }}
+            >
+              <View style={{ marginTop: 2 }}>
+                <Text style={styles.headerText}>WEX Requirements by Unis</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => {
+                (navigation.navigate(RoutePath.JUNIORCERT as never),
+                  setModalVisible(false));
+              }}
+            >
+              <View style={{ marginTop: 10 }}>
+                <Text style={styles.headerText}>Why Work Experience?</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        )}
+        {/* <TouchableOpacity onPress={() => handleFreeResources()}>
+          <View>
+            <Text style={styles.headerText}>Free Resources</Text>
+          </View>
+        </TouchableOpacity> */}
+        {/* {freeRes && (
+          <View style={{ marginTop: -25, marginLeft: 20 }}>
+            <PdfLink label="Section 1" pdfPath="/pdfs/Section1.pdf" />
+            <PdfLink
+              label="HPAT Scoring Guide"
+              pdfPath="/pdfs/HPAT_Scoring_Guide.pdf"
+            />
+            <PdfLink
+              label="HPAT Changes 2027"
+              pdfPath="/pdfs/HPAT_Changes_2027.pdf"
+            />
+          </View>
+        )} */}
         {/* <TouchableOpacity>
           <View>
             <Text style={styles.headerText}>More</Text>
@@ -223,15 +443,46 @@ const BASE_URL = process.env.PUBLIC_URL || '.' // empty in dev, repo prefix in p
   };
 
   // const displayUKCourses = () => {
-  //   return ukCourses?.map((item, index) => {
-  //     return courses(item, index);
-  //   });
+  //   return (
+  //     <View style={styles.headerSpace}>
+  //       <TouchableOpacity onPress={() => handleUCAT()}>
+  //         <View>
+  //           <Text style={styles.headerText}>UCAT</Text>
+  //         </View>
+  //       </TouchableOpacity>
+  //       <TouchableOpacity onPress={() => handlePersonalStatement()}>
+  //         <View>
+  //           <Text style={styles.headerText}>Personal Statement</Text>
+  //         </View>
+  //       </TouchableOpacity>
+  //       <TouchableOpacity onPress={() => handleAppStat()}>
+  //         <View>
+  //           <Text style={styles.headerText}>Application Strategy</Text>
+  //         </View>
+  //       </TouchableOpacity>
+  //       <TouchableOpacity onPress={() => handleWorkEx()}>
+  //         <View>
+  //           <Text style={styles.headerText}>Work Experience</Text>
+  //         </View>
+  //       </TouchableOpacity>
+  //       {/* <TouchableOpacity onPress={() => handleFreeResUK()}>
+  //         <View>
+  //           <Text style={styles.headerText}>Free Resources</Text>
+  //         </View>
+  //       </TouchableOpacity> */}
+  //       {/* <TouchableOpacity>
+  //         <View>
+  //           <Text style={styles.headerText}>More</Text>
+  //         </View>
+  //       </TouchableOpacity> */}
+  //     </View>
+  //   );
   // };
 
-  // const coursesDataSwitch = () => {
-  //   const country = region;
-  //   return country ? displayROICourses() : displayUKCourses();
-  // };
+  const coursesDataSwitch = () => {
+    const country = region;
+    return country ? displayROICourses() : displayUKCourses();
+  };
 
   return (
     <>
@@ -265,7 +516,7 @@ const BASE_URL = process.env.PUBLIC_URL || '.' // empty in dev, repo prefix in p
                   justifyContent: "space-between",
                 }}
               >
-                {/* <View
+                <View
                   style={{
                     marginTop: "3%",
                     width: "30%",
@@ -276,14 +527,14 @@ const BASE_URL = process.env.PUBLIC_URL || '.' // empty in dev, repo prefix in p
                   }}
                 >
                   {regionalSwitch()}
-                </View> */}
+                </View>
                 <TouchableOpacity
                   onPress={close}
                   style={{
                     marginTop: "4%",
                     width: "15%",
                     height: "80%",
-                    marginLeft: "75%",
+                    marginLeft: "25%",
                     alignItems: "center",
                   }}
                 >
@@ -293,7 +544,7 @@ const BASE_URL = process.env.PUBLIC_URL || '.' // empty in dev, repo prefix in p
                 </TouchableOpacity>
               </View>
               <View style={{ width: "100%", height: "45%", margin: "1%" }}>
-                {displayROICourses()}
+                {coursesDataSwitch()}
               </View>
             </View>
           </Modal>

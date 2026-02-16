@@ -1,18 +1,18 @@
-// export const courseData = [
-//   {
-//     title: "HPAT Preparation",
-//     description:
-//       "Elite Mentorship: Learn from expert tutors at Trinity and RCSI.\nPersonalised Coaching: Bespoke 1-to-1 or small group tuition.\nIntensive Courses: Two-day programs held in June and December 2026.\nStrategic Feedback: Custom study plans with constant progress monitoring.",
-//   },
-//   {
-//     title: "Leaving Cert Grinds",
-//     description:
-//       "⁠Expert 1-to-1 Tutoring: Master Maths, Chemistry, and Biology with specialists.\n⁠Personalised Study Plans: Bespoke roadmaps tailored to your academic goals.\n⁠Ultimate Flexibility: No rigid timetables—book sessions around your schedule.\n ⁠Proven Results: Focused support to help you maximise your points.",
-//   },
-//   {
-//     title: "UK Medicine Admissions",
-//     description:""  },
-// ];
+export const courseData = [
+  {
+    title: "HPAT Preparation",
+    description:
+      "Elite Mentorship: Learn from expert tutors at Trinity and RCSI.\nPersonalised Coaching: Bespoke 1-to-1 or small group tuition.\nIntensive Courses: Two-day programs held in June and December 2026.\nStrategic Feedback: Custom study plans with constant progress monitoring.",
+  },
+  {
+    title: "Leaving Cert Grinds",
+    description:
+      "⁠Expert 1-to-1 Tutoring: Master Maths, Chemistry, and Biology with specialists.\n⁠Personalised Study Plans: Bespoke roadmaps tailored to your academic goals.\n⁠Ultimate Flexibility: No rigid timetables—book sessions around your schedule.\n ⁠Proven Results: Focused support to help you maximise your points.",
+  },
+  {
+    title: "UK Medicine Admissions",
+    description:""  },
+];
 
 // export const courseDataTwo = [
 //   {
