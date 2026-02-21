@@ -17,6 +17,7 @@ import JuniorCertificateChangeContainer from "../website/courses/irelandCourses/
 import UCATGroupPrepContainer from "../website/courses/ukCourses/UCAT Tutoring/ucatPrep";
 import PersonalGuidanceContainer from "../website/courses/ukCourses/Personal Statement/personalGuidance";
 import PersonalFAQsContainer from "../website/courses/ukCourses/Personal Statement/personalFAQs";
+import UCASExtraContainer from "../website/courses/ukCourses/Application Strategy/UCASExtra";
 
 type RootStackParamList = {
   [RoutePath.Home]: undefined;
@@ -31,6 +32,7 @@ type RootStackParamList = {
   [RoutePath.PERSONALGUIDANCE]: undefined;
   [RoutePath.PERSONALREVIEW]: undefined;
   [RoutePath.PERSONALFAQ]: undefined;
+    [RoutePath.UCASEXTRA]: undefined;
   Courses: undefined;
   Hero: undefined;
   Navigation: undefined;
@@ -99,6 +101,10 @@ const RootStack = () => {
         <Stack.Screen
           name={RoutePath.PERSONALFAQ}
           component={PersonalFAQsContainer}
+        />
+        <Stack.Screen
+          name={RoutePath.UCASEXTRA}
+          component={UCASExtraContainer}
         />
         {/* Optional catch-all */}
         {/* <Stack.Screen name="NotFound" component={Home} /> */}

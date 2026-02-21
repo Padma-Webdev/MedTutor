@@ -425,7 +425,7 @@ export default function NavigationTop() {
             </View>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => navigation.navigate(RoutePath.JUNIORCERT as never)}
+            onPress={() => navigation.navigate(RoutePath.UCASEXTRA as never)}
           >
             <View style={{ marginTop: 2, marginBottom: 2 }}>
               <Text style={styles.headerText}>What is UCAS Extra</Text>

@@ -264,7 +264,7 @@ export default function NavigationSide() {
           <View style={{ marginTop: -25, marginLeft: 20 }}>
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate(RoutePath.ABOUTHPAT as never);
+                navigation.navigate(RoutePath.UCATTUTOR as never);
                 setModalVisible(false);
               }}
             >
@@ -274,7 +274,7 @@ export default function NavigationSide() {
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate(RoutePath.HPATCHANGES as never);
+                navigation.navigate(RoutePath.UCATCOURSES as never);
                 setModalVisible(false);
               }}
             >
