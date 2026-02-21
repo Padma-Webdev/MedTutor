@@ -58,7 +58,7 @@ export const styles = StyleSheet.create({
     marginLeft: "5%",
     justifyContent: "space-evenly",
   },
-    headerSpaceMobile: {
+  headerSpaceMobile: {
     flex: 0.7,
     flexDirection: "column",
     marginLeft: "6%",
@@ -128,7 +128,7 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 5,
   },
-    ucatDropDownView: {
+  ucatDropDownView: {
     flex: 0.23,
     flexDirection: "column",
     width: 220,
@@ -141,7 +141,7 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 5,
   },
-    hpatDropDownViewSmall: {
+  hpatDropDownViewSmall: {
     flex: 0.23,
     flexDirection: "column",
     width: 220,
@@ -167,12 +167,12 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 5,
   },
-    personalStatementDropDownView: {
+  personalStatementDropDownView: {
     flex: 0.23,
     flexDirection: "column",
     width: 220,
     height: "100%",
-    marginLeft: "45%",
+    marginLeft: "40%",
     justifyContent: "space-evenly",
     backgroundColor: "#112230",
     borderRadius: 10,
@@ -193,12 +193,12 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 5,
   },
-    appStatDropDownView: {
+  appStatDropDownView: {
     flex: 0.23,
     flexDirection: "column",
     width: 220,
     height: "100%",
-    marginLeft: "60%",
+    marginLeft: "55%",
     justifyContent: "space-evenly",
     backgroundColor: "#112230",
     borderRadius: 10,
@@ -206,12 +206,12 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 5,
   },
-    WorkExDropDownView: {
+  interviewDropDownView: {
     flex: 0.23,
     flexDirection: "column",
     width: 220,
     height: "100%",
-    marginLeft: "76%",
+    marginLeft: "67%",
     justifyContent: "space-evenly",
     backgroundColor: "#112230",
     borderRadius: 10,
@@ -219,7 +219,20 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 5,
   },
-    FreeResView: {
+  WorkExDropDownView: {
+    flex: 0.23,
+    flexDirection: "column",
+    width: 220,
+    height: "100%",
+    marginLeft: "79%",
+    justifyContent: "space-evenly",
+    backgroundColor: "#112230",
+    borderRadius: 10,
+    borderColor: "#23CFBB",
+    borderWidth: 1,
+    padding: 5,
+  },
+  FreeResView: {
     flex: 0.23,
     flexDirection: "column",
     width: 220,

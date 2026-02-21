@@ -238,16 +238,29 @@ export default function UCATGroupPrepContainer() {
   const TutorDetails = () => {
     return (
       <View
-        style={{
-          flexDirection: "column",
-          width: "55%",
-          justifyContent: "space-around",
-          backgroundColor: "#080e19",
-          borderRadius: 15,
-          borderWidth: 2,
-          marginLeft: "2%",
-          borderColor: "#23CFBB",
-        }}
+        style={
+          isSmallScreen
+            ? {
+                width: "99%",
+                alignSelf: "center",
+                marginTop: "1%",
+                padding: 15,
+                borderRadius: 15,
+                borderWidth: 2.5,
+                borderColor: "#23CFBB",
+                backgroundColor: "#080e19",
+              }
+            : {
+                flexDirection: "column",
+                width: "55%",
+                justifyContent: "space-around",
+                backgroundColor: "#080e19",
+                borderRadius: 15,
+                borderWidth: 2,
+                marginLeft: "2%",
+                borderColor: "#23CFBB",
+              }
+        }
       >
         <Text
           style={{
@@ -261,15 +274,23 @@ export default function UCATGroupPrepContainer() {
         </Text>
         <View
           style={{
-            flexDirection: "row",
-
+            flexDirection: isSmallScreen ? "column" : "row",
             justifyContent: "space-around",
+            marginTop:15,
           }}
         >
           <View
             style={
               isSmallScreen
-                ? personalStyles.courseViewSmallScreen
+                ? {
+                    width: "95%",
+                    alignSelf: "center",
+                    marginTop: "0.5%",
+                    padding: 15,
+                    borderRadius: 15,
+                    borderWidth: 2.5,
+                    borderColor: "#23CFBB",
+                  }
                 : {
                     width: "49%",
                     height: "100%",
@@ -285,13 +306,7 @@ export default function UCATGroupPrepContainer() {
                 isSmallScreen
                   ? {
                       flex: 1,
-                      backgroundColor: "#080e19",
-                      marginBottom: 10,
-                      width: "95%",
-                      padding: 20,
-                      borderRadius: 15,
-                      borderWidth: 1,
-                      borderColor: "#06443e",
+                      width: "98%",
                       justifyContent: "space-around",
                       flexDirection: "column",
                     }
@@ -312,10 +327,11 @@ export default function UCATGroupPrepContainer() {
                   style={
                     isSmallScreen
                       ? {
-                          width: "100%",
-                          height: 100,
+                          width: "70%",
+                          height: 120,
                           borderRadius: 10,
                           marginBottom: 15,
+                          alignSelf: "center",
                         }
                       : {
                           width: screenWidth * 0.15,
@@ -368,7 +384,15 @@ export default function UCATGroupPrepContainer() {
           <View
             style={
               isSmallScreen
-                ? personalStyles.courseViewSmallScreen
+                ? {
+                    width: "95%",
+                    alignSelf: "center",
+                    marginTop: "0.5%",
+                    padding: 15,
+                    borderRadius: 15,
+                    borderWidth: 2.5,
+                    borderColor: "#23CFBB",
+                  }
                 : {
                     width: "49%",
                     height: "100%",
@@ -384,15 +408,8 @@ export default function UCATGroupPrepContainer() {
                 isSmallScreen
                   ? {
                       flex: 1,
-                      backgroundColor: "#080e19",
-                      marginBottom: 10,
-                      width: "95%",
+                      width: "99%",
                       padding: 20,
-                      borderRadius: 15,
-                      borderWidth: 1,
-                      borderColor: "#06443e",
-                      justifyContent: "space-around",
-                      flexDirection: "column",
                     }
                   : {
                       flex: 0.5,
@@ -411,10 +428,11 @@ export default function UCATGroupPrepContainer() {
                   style={
                     isSmallScreen
                       ? {
-                          width: "100%",
-                          height: 100,
+                          width: "80%",
+                          height: 120,
                           borderRadius: 10,
                           marginBottom: 15,
+                          alignSelf:"center"
                         }
                       : {
                           width: screenWidth * 0.15,
@@ -485,7 +503,7 @@ export default function UCATGroupPrepContainer() {
             style={{
               flex: 1,
               width: screenWidth,
-              height: isSmallScreen ? screenHeight * 2 : screenHeight * 1.35,
+              height: isSmallScreen ? screenHeight * 1.16 : screenHeight * 1.35,
             }}
           >
             <View
@@ -499,10 +517,17 @@ export default function UCATGroupPrepContainer() {
                 backgroundColor: "#080e19",
                 opacity: 0.3,
                 width: screenWidth,
-                height: isSmallScreen ? screenHeight * 2 : screenHeight * 1.35,
+                height: isSmallScreen ? screenHeight * 1.16 : screenHeight * 1.35,
               }}
             />
-            <View style={hpatStyles.backButton}>
+            <View
+              style={{
+                marginLeft: 40,
+                justifyContent: "flex-start",
+                flexDirection: "row",
+                width: "5%",
+              }}
+            >
               <BackButton />
             </View>
             {Header()}

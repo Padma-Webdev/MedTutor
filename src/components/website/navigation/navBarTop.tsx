@@ -41,6 +41,7 @@ export default function NavigationTop() {
   const [personalStatement, showpersonalStatement] = useState(false);
   const [appStat, showappStat] = useState(false);
   const [workEx, showWorkEx] = useState(false);
+  const [interview, showInterviews] = useState(false);
   const [freeResUK, showfreeResUK] = useState(false);
   const regionSwitchROI = () => {
     setRegion(true);
@@ -53,6 +54,7 @@ export default function NavigationTop() {
     showappStat(false);
     showWorkEx(false);
     showfreeResUK(false);
+    showInterviews(false);
   };
   const regionSwitchUK = () => {
     setRegion(false);
@@ -65,6 +67,7 @@ export default function NavigationTop() {
     showappStat(false);
     showWorkEx(false);
     showfreeResUK(false);
+    showInterviews(false);
   };
 
   const handleHPAT = () => {
@@ -94,6 +97,7 @@ export default function NavigationTop() {
     showappStat(false);
     showWorkEx(false);
     showfreeResUK(false);
+    showInterviews(false);
   };
 
   const handlePersonalStatement = () => {
@@ -102,12 +106,23 @@ export default function NavigationTop() {
     showappStat(false);
     showWorkEx(false);
     showfreeResUK(false);
+    showInterviews(false);
   };
 
   const handleAppStat = () => {
     showUcat(false);
     showpersonalStatement(false);
     showappStat(true);
+    showWorkEx(false);
+    showfreeResUK(false);
+    showInterviews(false);
+  };
+
+  const handleInterviews = () => {
+    showInterviews(true);
+    showUcat(false);
+    showpersonalStatement(false);
+    showappStat(false);
     showWorkEx(false);
     showfreeResUK(false);
   };
@@ -118,6 +133,7 @@ export default function NavigationTop() {
     showappStat(false);
     showWorkEx(true);
     showfreeResUK(false);
+    showInterviews(false);
   };
 
   // const handleFreeResUK = () => {
@@ -143,6 +159,7 @@ export default function NavigationTop() {
   useEffect(() => {}, [personalStatement]);
   useEffect(() => {}, [appStat]);
   useEffect(() => {}, [workEx]);
+  useEffect(() => {}, [interview]);
   useEffect(() => {}, [freeResUK]);
   useEffect(() => {}, [region]);
 
@@ -181,6 +198,11 @@ export default function NavigationTop() {
         <TouchableOpacity onPress={() => handleAppStat()}>
           <View>
             <Text style={styles.headerText}>Application Strategy</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => handleInterviews()}>
+          <View>
+            <Text style={styles.headerText}>Interviews</Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => handleWorkEx()}>
@@ -357,28 +379,15 @@ export default function NavigationTop() {
               <Text style={styles.headerText}>UCAT Courses</Text>
             </View>
           </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => navigation.navigate(RoutePath.JUNIORCERT as never)}
-          >
-            <View style={{ marginTop: 2, marginBottom: 2 }}>
-              <Text style={styles.headerText}>UCAT Daily Study Timetable</Text>
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => navigation.navigate(RoutePath.JUNIORCERT as never)}
-          >
-            <View style={{ marginTop: 2, marginBottom: 2 }}>
-              <Text style={styles.headerText}>UCAT Score Calculation</Text>
-            </View>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            onPress={() => navigation.navigate(RoutePath.JUNIORCERT as never)}
-          >
-            <View style={{ marginTop: 2, marginBottom: 2 }}>
-              <Text style={styles.headerText}>UCAT 2025 Stats</Text>
-            </View>
-          </TouchableOpacity>
+          <PdfLink
+            label="UCAT Daily Study Timetable"
+            pdfPath="pdfs/UCAT_Daily_Study_Timetable.pdf"
+          />
+          <PdfLink
+            label="UCAT Score Calculation"
+            pdfPath="pdfs/UCAT_Score_Calculation.pdf"
+          />
+          <PdfLink label="UCAT 2025 Stats" pdfPath="pdfs/UCAT_2025_Stats.pdf" />
         </View>
       )}
       {personalStatement && (
@@ -424,15 +433,37 @@ export default function NavigationTop() {
           </TouchableOpacity>
         </View>
       )}
-      {workEx && (
-        <View style={styles.WorkExDropDownView}>
+      {interview && (
+        <View style={styles.interviewDropDownView}>
           <TouchableOpacity
             onPress={() => navigation.navigate(RoutePath.LEAVINGCERT as never)}
           >
             <View style={{ marginTop: 2, marginBottom: 2 }}>
-              <Text style={styles.headerText}>WEX Requirements by Unis</Text>
+              <Text style={styles.headerText}>Medicinal Mock Interview</Text>
             </View>
           </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(RoutePath.JUNIORCERT as never)}
+          >
+            <View style={{ marginTop: 2, marginBottom: 2 }}>
+              <Text style={styles.headerText}>OxBridge Medicine Interview</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(RoutePath.JUNIORCERT as never)}
+          >
+            <View style={{ marginTop: 2, marginBottom: 2 }}>
+              <Text style={styles.headerText}>Medical Panel Interview</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+      )}
+      {workEx && (
+        <View style={styles.WorkExDropDownView}>
+          <PdfLink
+            label="WEX Requirements by Unis"
+            pdfPath="pdfs/Wex_Requirements_by_Unis.pdf"
+          />
           <TouchableOpacity
             onPress={() => navigation.navigate(RoutePath.JUNIORCERT as never)}
           >
