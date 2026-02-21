@@ -80,7 +80,7 @@ export const personalStyles = StyleSheet.create({
     alignItems: "center",
     margin: 10,
   },
-    personalTutorPressed: {
+  personalTutorPressed: {
     backgroundColor: "red",
     height: 60,
     width: "45%",
@@ -124,6 +124,7 @@ export const personalStyles = StyleSheet.create({
   },
   courseView: {
     width: "70%",
+    marginTop: "1%",
     alignSelf: "center",
     padding: 15,
     borderRadius: 15,
@@ -133,6 +134,7 @@ export const personalStyles = StyleSheet.create({
   courseViewSmallScreen: {
     width: "90%",
     alignSelf: "center",
+    marginTop: "0.5%",
     padding: 15,
     borderRadius: 15,
     borderWidth: 2.5,
@@ -167,7 +169,7 @@ export const personalStyles = StyleSheet.create({
     width: "65%",
     alignContent: "center",
   },
-    buttonCourseTextSmallScreen: {
+  buttonCourseTextSmallScreen: {
     fontSize: 20,
     color: "#080e19",
     width: "85%",

@@ -14,6 +14,7 @@ import GroupPrepContainer from "../website/courses/irelandCourses/HPAT_Tutoring/
 import DayPrepContainer from "../website/courses/irelandCourses/HPAT_Tutoring/dayPrep";
 import LeavingCertContainer from "../website/courses/irelandCourses/JuniorCert/leavingCert";
 import JuniorCertificateChangeContainer from "../website/courses/irelandCourses/JuniorCert/juniorCert";
+import UCATGroupPrepContainer from "../website/courses/ukCourses/UCAT Tutoring/ucatPrep";
 
 type RootStackParamList = {
   [RoutePath.Home]: undefined;
@@ -24,6 +25,7 @@ type RootStackParamList = {
   [RoutePath.WEEKPREP]: undefined;
   [RoutePath.LEAVINGCERT]: undefined;
   [RoutePath.JUNIORCERT]: undefined;
+    [RoutePath.UCATTUTOR]: undefined;
   Courses: undefined;
   Hero: undefined;
   Navigation: undefined;
@@ -63,6 +65,7 @@ const RootStack = () => {
         <Stack.Screen name={RoutePath.WEEKPREP} component={DayPrepContainer} />
         <Stack.Screen name={RoutePath.LEAVINGCERT} component={LeavingCertContainer} />
         <Stack.Screen name={RoutePath.JUNIORCERT} component={JuniorCertificateChangeContainer} />
+        <Stack.Screen name={RoutePath.UCATTUTOR} component={UCATGroupPrepContainer} />
         {/* Optional catch-all */}
         {/* <Stack.Screen name="NotFound" component={Home} /> */}
       </Stack.Navigator>

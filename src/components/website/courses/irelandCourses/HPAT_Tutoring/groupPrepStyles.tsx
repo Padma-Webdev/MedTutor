@@ -66,7 +66,7 @@ export const groupStyles = StyleSheet.create({
     color: "#f8fefe",
     marginBottom: 10,
   },
-    perSessionReg: {
+  perSessionReg: {
     fontSize: 18,
     fontWeight: "bold",
     color: "#f8fefe",
@@ -168,6 +168,7 @@ export const groupStyles = StyleSheet.create({
   pricingNextLine: {
     fontSize: 15,
     color: "#f8fefe",
+    fontWeight: "700",
     marginBottom: 5,
     marginLeft: 50,
   },
@@ -175,6 +176,7 @@ export const groupStyles = StyleSheet.create({
     fontSize: 15,
     color: "#f8fefe",
     marginBottom: 5,
+    fontWeight: "700",
     marginLeft: 20,
   },
 });

@@ -7,4 +7,6 @@ export enum RoutePath {
   WEEKPREP = "week-prep",
   LEAVINGCERT = "leaving-cert",
   JUNIORCERT = "junior-cert",
+  UCATTUTOR = "ucat-tutoring",
+  UCATCOURSES = "ucat-courses",
 }

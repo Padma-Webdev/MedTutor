@@ -44,6 +44,15 @@ export default function NavigationTop() {
   const [freeResUK, showfreeResUK] = useState(false);
   const regionSwitchROI = () => {
     setRegion(true);
+    showHpat(false);
+    showHpatTutor(false);
+    showLeaveCert(false);
+    showfreeRes(false);
+    showUcat(false);
+    showpersonalStatement(false);
+    showappStat(false);
+    showWorkEx(false);
+    showfreeResUK(false);
   };
   const regionSwitchUK = () => {
     setRegion(false);
@@ -51,6 +60,11 @@ export default function NavigationTop() {
     showHpatTutor(false);
     showLeaveCert(false);
     showfreeRes(false);
+    showUcat(false);
+    showpersonalStatement(false);
+    showappStat(false);
+    showWorkEx(false);
+    showfreeResUK(false);
   };
 
   const handleHPAT = () => {
@@ -297,12 +311,12 @@ export default function NavigationTop() {
       )}
       {/* {freeRes && (
         <View style={styles.FreeResView}> */}
-          {/* <TouchableOpacity onPress={() => downloadPDF("Section 1.pdf")}>
+      {/* <TouchableOpacity onPress={() => downloadPDF("Section 1.pdf")}>
             <View style={{ marginTop: 2, marginBottom: 2 }}>
               <Text style={styles.headerText}>Section 1</Text>
             </View>
           </TouchableOpacity> */}
-          {/* <PdfLink label="Section 1" pdfPath="pdfs/Section1.pdf" />
+      {/* <PdfLink label="Section 1" pdfPath="pdfs/Section1.pdf" />
           <PdfLink
             label="HPAT Scoring Guide"
             pdfPath="pdfs/HPAT_Scoring_Guide.pdf"
@@ -311,7 +325,7 @@ export default function NavigationTop() {
             label="HPAT Changes 2027"
             pdfPath="pdfs/HPAT_Changes_2027.pdf"
           /> */}
-          {/* <TouchableOpacity
+      {/* <TouchableOpacity
             onPress={() => downloadPDF("HPAT Scoring Guide.pdf")}
           >
             <View style={{ marginTop: 2, marginBottom: 2 }}>
@@ -325,12 +339,12 @@ export default function NavigationTop() {
               <Text style={styles.headerText}>HPAT Changes 2027</Text>
             </View>
           </TouchableOpacity> */}
-        {/* </View>
+      {/* </View>
       )} */}
       {ucat && (
         <View style={styles.ucatDropDownView}>
           <TouchableOpacity
-            onPress={() => navigation.navigate(RoutePath.LEAVINGCERT as never)}
+            onPress={() => navigation.navigate(RoutePath.UCATTUTOR as never)}
           >
             <View style={{ marginTop: 2, marginBottom: 2 }}>
               <Text style={styles.headerText}>UCAT Tutoring</Text>
@@ -357,7 +371,7 @@ export default function NavigationTop() {
               <Text style={styles.headerText}>UCAT Score Calculation</Text>
             </View>
           </TouchableOpacity>
-         
+
           <TouchableOpacity
             onPress={() => navigation.navigate(RoutePath.JUNIORCERT as never)}
           >
