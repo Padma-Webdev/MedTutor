@@ -28,6 +28,20 @@ export const JuniorStyles = StyleSheet.create({
     marginLeft: "2%",
     marginTop:"1%",
   },
+    bulletFAQPersonal: {
+    fontSize: 15,
+    color: "#f8fefe",
+    fontWeight: "600",
+    marginBottom: 15,
+    marginLeft: "2%",
+    marginTop:"1%",
+  },
+  faqAnswer: {
+    fontSize: 14,
+    color: "#f8fefe",
+    marginBottom: 5,
+    marginLeft: "2.5%",
+  },
   pricingNextLine: {
     fontSize: 18,
     color: "#f8fefe",

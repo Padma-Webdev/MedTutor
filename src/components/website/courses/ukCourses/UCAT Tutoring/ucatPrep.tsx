@@ -15,7 +15,6 @@ import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { personalStyles } from "../../irelandCourses/HPAT_Tutoring/personalStyles";
 import { groupStyles } from "../../irelandCourses/HPAT_Tutoring/groupPrepStyles";
 import { UCATPersonalisedTutoring } from "./ucatPersonalTutoring";
-import { hpatStyles } from "../../irelandCourses/HPAT/hpatStyles";
 import { UCATSmallGroupTutoring } from "./ucatSmallGroup";
 
 type ButtonState = "default" | "pressed";

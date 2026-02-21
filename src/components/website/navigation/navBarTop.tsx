@@ -393,7 +393,7 @@ export default function NavigationTop() {
       {personalStatement && (
         <View style={styles.personalStatementDropDownView}>
           <TouchableOpacity
-            onPress={() => navigation.navigate(RoutePath.LEAVINGCERT as never)}
+            onPress={() => navigation.navigate(RoutePath.PERSONALGUIDANCE as never)}
           >
             <View style={{ marginTop: 2, marginBottom: 2 }}>
               <Text style={styles.headerText}>Personal Statement Guidance</Text>
@@ -407,7 +407,7 @@ export default function NavigationTop() {
             </View>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => navigation.navigate(RoutePath.JUNIORCERT as never)}
+            onPress={() => navigation.navigate(RoutePath.PERSONALFAQ as never)}
           >
             <View style={{ marginTop: 2, marginBottom: 2 }}>
               <Text style={styles.headerText}>Personal Statement FAQs</Text>

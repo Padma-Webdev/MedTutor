@@ -9,4 +9,7 @@ export enum RoutePath {
   JUNIORCERT = "junior-cert",
   UCATTUTOR = "ucat-tutoring",
   UCATCOURSES = "ucat-courses",
+  PERSONALGUIDANCE = "personal-guidance",
+  PERSONALREVIEW = "personal-review",
+  PERSONALFAQ = "personal-faqs",
 }

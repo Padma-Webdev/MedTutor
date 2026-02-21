@@ -9,6 +9,14 @@ export const personalStyles = StyleSheet.create({
     borderWidth: 2,
     borderColor: "#23CFBB",
   },
+    headerPersonal: {
+    width: "60%",
+    alignSelf: "center",
+    padding: 15,
+    borderRadius: 15,
+    borderWidth: 2,
+    borderColor: "#23CFBB",
+  },
   headerSmallScreen: {
     width: "90%",
     alignSelf: "center",

@@ -15,6 +15,8 @@ import DayPrepContainer from "../website/courses/irelandCourses/HPAT_Tutoring/da
 import LeavingCertContainer from "../website/courses/irelandCourses/JuniorCert/leavingCert";
 import JuniorCertificateChangeContainer from "../website/courses/irelandCourses/JuniorCert/juniorCert";
 import UCATGroupPrepContainer from "../website/courses/ukCourses/UCAT Tutoring/ucatPrep";
+import PersonalGuidanceContainer from "../website/courses/ukCourses/Personal Statement/personalGuidance";
+import PersonalFAQsContainer from "../website/courses/ukCourses/Personal Statement/personalFAQs";
 
 type RootStackParamList = {
   [RoutePath.Home]: undefined;
@@ -25,7 +27,10 @@ type RootStackParamList = {
   [RoutePath.WEEKPREP]: undefined;
   [RoutePath.LEAVINGCERT]: undefined;
   [RoutePath.JUNIORCERT]: undefined;
-    [RoutePath.UCATTUTOR]: undefined;
+  [RoutePath.UCATTUTOR]: undefined;
+  [RoutePath.PERSONALGUIDANCE]: undefined;
+  [RoutePath.PERSONALREVIEW]: undefined;
+  [RoutePath.PERSONALFAQ]: undefined;
   Courses: undefined;
   Hero: undefined;
   Navigation: undefined;
@@ -34,9 +39,9 @@ type RootStackParamList = {
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-const linking: LinkingOptions<RootStackParamList>  = {
+const linking: LinkingOptions<RootStackParamList> = {
   prefixes: [process.env.EXPO_PUBLIC_BASE_URL ?? "/"],
-};;
+};
 
 const RootStack = () => {
   return (
@@ -46,11 +51,11 @@ const RootStack = () => {
         screenOptions={{
           headerShown: true,
           header: () => <Navigation />,
-          headerStyle: { backgroundColor: 'transparent' },
-          headerTintColor: 'white',
+          headerStyle: { backgroundColor: "transparent" },
+          headerTintColor: "white",
           headerTransparent: true,
-          headerTitle: '',
-          title: 'MedTutor',
+          headerTitle: "",
+          title: "MedTutor",
         }}
       >
         <Stack.Screen name={RoutePath.Home} component={Home} />
@@ -58,14 +63,43 @@ const RootStack = () => {
         <Stack.Screen name="Hero" component={HeroContainer} />
         <Stack.Screen name="Navigation" component={Navigation} />
         <Stack.Screen name="Contact-us" component={ContactUsContainer} />
-        <Stack.Screen name={RoutePath.ABOUTHPAT} component={AboutHPATContainer} />
-        <Stack.Screen name={RoutePath.HPATDATES} component={HPATDatesContainer} />
-        <Stack.Screen name={RoutePath.HPATCHANGES} component={HPATChangesContainer} />
-        <Stack.Screen name={RoutePath.GROUPPREP} component={GroupPrepContainer} />
+        <Stack.Screen
+          name={RoutePath.ABOUTHPAT}
+          component={AboutHPATContainer}
+        />
+        <Stack.Screen
+          name={RoutePath.HPATDATES}
+          component={HPATDatesContainer}
+        />
+        <Stack.Screen
+          name={RoutePath.HPATCHANGES}
+          component={HPATChangesContainer}
+        />
+        <Stack.Screen
+          name={RoutePath.GROUPPREP}
+          component={GroupPrepContainer}
+        />
         <Stack.Screen name={RoutePath.WEEKPREP} component={DayPrepContainer} />
-        <Stack.Screen name={RoutePath.LEAVINGCERT} component={LeavingCertContainer} />
-        <Stack.Screen name={RoutePath.JUNIORCERT} component={JuniorCertificateChangeContainer} />
-        <Stack.Screen name={RoutePath.UCATTUTOR} component={UCATGroupPrepContainer} />
+        <Stack.Screen
+          name={RoutePath.LEAVINGCERT}
+          component={LeavingCertContainer}
+        />
+        <Stack.Screen
+          name={RoutePath.JUNIORCERT}
+          component={JuniorCertificateChangeContainer}
+        />
+        <Stack.Screen
+          name={RoutePath.UCATTUTOR}
+          component={UCATGroupPrepContainer}
+        />
+        <Stack.Screen
+          name={RoutePath.PERSONALGUIDANCE}
+          component={PersonalGuidanceContainer}
+        />
+        <Stack.Screen
+          name={RoutePath.PERSONALFAQ}
+          component={PersonalFAQsContainer}
+        />
         {/* Optional catch-all */}
         {/* <Stack.Screen name="NotFound" component={Home} /> */}
       </Stack.Navigator>
