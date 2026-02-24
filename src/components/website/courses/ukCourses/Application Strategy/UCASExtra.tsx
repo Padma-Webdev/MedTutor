@@ -182,7 +182,7 @@ export default function UCASExtraContainer() {
             style={{
               flex: 1,
               width: screenWidth,
-              height: isSmallScreen ? screenHeight : screenHeight * 0.6,
+              height: screenHeight,
             }}
           >
             <View

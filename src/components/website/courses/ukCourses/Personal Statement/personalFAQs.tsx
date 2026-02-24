@@ -141,12 +141,12 @@ export default function PersonalFAQsContainer() {
             style={{
               flex: 1,
               width: screenWidth,
-              height: isSmallScreen ? screenHeight * 1.6 : screenHeight  * 0.9,
+              height: isSmallScreen ? screenHeight * 1.6 : screenHeight * 1.2,
             }}
           >
             <View
               style={{
-                     height: isSmallScreen ? screenHeight * 1.6 : screenHeight  * 0.9,
+                     height: isSmallScreen ? screenHeight * 1.6 : screenHeight ,
                 // borderRadius: 15,
                 position: "absolute",
                 top: 0,

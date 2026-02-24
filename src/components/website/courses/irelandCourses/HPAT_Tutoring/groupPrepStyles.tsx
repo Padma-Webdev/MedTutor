@@ -53,6 +53,13 @@ export const groupStyles = StyleSheet.create({
     marginBottom: 10,
     marginLeft: 45,
   },
+  groupUCATHeader: {
+    fontSize: 15,
+    fontWeight: "bold",
+    color: "#f8fefe",
+    marginBottom: 10,
+    marginLeft: 35,
+  },
   groupBoldHeaderSmallScreen: {
     fontSize: 15,
     fontWeight: "bold",

@@ -33,7 +33,7 @@ export const UCATPersonalisedTutoring = () => {
         style={
           isSmallScreen
             ? groupStyles.groupBoldHeaderSmallScreen
-            : groupStyles.groupBoldHeader
+            : groupStyles.groupUCATHeader
         }
       >
         Includes:
