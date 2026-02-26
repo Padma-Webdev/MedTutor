@@ -67,6 +67,7 @@ export default function MMIContainer() {
             fontWeight: "400",
             marginBottom: 10,
             marginLeft: isSmallScreen ? 10 : 25,
+            marginRight: "1.5%",
           }}
         >
           Oxford and Cambridge medicine interviews assess how you think, not

@@ -41,6 +41,7 @@ export const JuniorStyles = StyleSheet.create({
     color: "#f8fefe",
     marginBottom: 5,
     marginLeft: "2.5%",
+    marginRight: "1.5%",
   },
   pricingNextLine: {
     fontSize: 18,
@@ -54,14 +55,16 @@ export const JuniorStyles = StyleSheet.create({
     color: "#f8fefe",
     marginBottom: 10,
     marginLeft: "5%",
+
+    marginRight: "1.5%",
   },
-  omi:{
-              fontSize: 17,
-              fontWeight: "400",
-              color: "#f8fefe",
-              marginBottom: 10,
-              marginLeft: "12%",
-            },
+  omi: {
+    fontSize: 17,
+    fontWeight: "400",
+    color: "#f8fefe",
+    marginBottom: 10,
+    marginLeft: "12%",
+  },
   hpatDesc2: {
     fontSize: 18,
     color: "#f8fefe",

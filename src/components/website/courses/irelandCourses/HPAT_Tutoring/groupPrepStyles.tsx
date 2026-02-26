@@ -39,6 +39,7 @@ export const groupStyles = StyleSheet.create({
     color: "#f8fefe",
     marginBottom: 10,
     marginLeft: 35,
+    
   },
   groupBodySmallScreen: {
     fontSize: 17,
@@ -184,6 +185,7 @@ export const groupStyles = StyleSheet.create({
     fontWeight: "700",
     marginBottom: 5,
     marginLeft: 50,
+    marginRight: "2%" 
   },
   pricingNextLineSmallScreen: {
     fontSize: 15,

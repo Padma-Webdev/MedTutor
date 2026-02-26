@@ -16,14 +16,17 @@ export const hpatStyles = StyleSheet.create({
     fontWeight: "400",
     marginBottom: 10,
     marginLeft: 25,
+
+    marginRight: "1.5%",
   },
 
-    hpatDescWork: {
+  hpatDescWork: {
     fontSize: 18,
     color: "#f8fefe",
     fontWeight: "400",
     marginBottom: 10,
     marginLeft: 20,
+    marginRight: "1.5%",
   },
   hpatDescDates: {
     fontSize: 18,
@@ -125,6 +128,6 @@ export const hpatStyles = StyleSheet.create({
     fontSize: 12,
     color: "#f8fefe",
     fontStyle: "italic",
-    marginBottom:30,
+    marginBottom: 30,
   },
 });
