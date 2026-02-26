@@ -15,13 +15,6 @@ export default function NavigationSide() {
   const [modalVisible, setModalVisible] = useState(false);
   const show = () => setModalVisible(true);
   const close = () => setModalVisible(false);
-  const regionSwitchROI = () => {
-    setRegion(true);
-  };
-  const regionSwitchUK = () => {
-    setRegion(false);
-  };
-
   const [hpat, showHpat] = useState(false);
   const [hpatTutor, showHpatTutor] = useState(false);
   const [leaveCert, showLeaveCert] = useState(false);
@@ -30,10 +23,33 @@ export default function NavigationSide() {
   const [personalStatement, showpersonalStatement] = useState(false);
   const [appStat, showappStat] = useState(false);
   const [workEx, showWorkEx] = useState(false);
+  const [interview, showInterviews] = useState(false);
   const [freeResUK, showfreeResUK] = useState(false);
-  const handleOnPress = () => {
-    // navigation.navigate(RoutePath.HPAT as never)
-    setModalVisible(false);
+  const regionSwitchROI = () => {
+    setRegion(true);
+    showHpat(false);
+    showHpatTutor(false);
+    showLeaveCert(false);
+    showfreeRes(false);
+    showUcat(false);
+    showpersonalStatement(false);
+    showappStat(false);
+    showWorkEx(false);
+    showfreeResUK(false);
+    showInterviews(false);
+  };
+  const regionSwitchUK = () => {
+    setRegion(false);
+    showHpat(false);
+    showHpatTutor(false);
+    showLeaveCert(false);
+    showfreeRes(false);
+    showUcat(false);
+    showpersonalStatement(false);
+    showappStat(false);
+    showWorkEx(false);
+    showfreeResUK(false);
+    showInterviews(false);
   };
 
   const handleHPAT = () => {
@@ -41,8 +57,6 @@ export default function NavigationSide() {
     showHpatTutor(false);
     showLeaveCert(false);
     showfreeRes(false);
-    close;
-    // showMoreRes(false);
   };
 
   const handleHPATTutoring = () => {
@@ -50,7 +64,6 @@ export default function NavigationSide() {
     showHpatTutor(true);
     showLeaveCert(false);
     showfreeRes(false);
-    // showMoreRes(false);
   };
 
   const handleleavingCert = () => {
@@ -58,14 +71,15 @@ export default function NavigationSide() {
     showHpatTutor(false);
     showLeaveCert(true);
     showfreeRes(false);
-    // showMoreRes(false);
   };
+
   const handleUCAT = () => {
     showUcat(true);
     showpersonalStatement(false);
     showappStat(false);
     showWorkEx(false);
     showfreeResUK(false);
+    showInterviews(false);
   };
 
   const handlePersonalStatement = () => {
@@ -74,12 +88,23 @@ export default function NavigationSide() {
     showappStat(false);
     showWorkEx(false);
     showfreeResUK(false);
+    showInterviews(false);
   };
 
   const handleAppStat = () => {
     showUcat(false);
     showpersonalStatement(false);
     showappStat(true);
+    showWorkEx(false);
+    showfreeResUK(false);
+    showInterviews(false);
+  };
+
+  const handleInterviews = () => {
+    showInterviews(true);
+    showUcat(false);
+    showpersonalStatement(false);
+    showappStat(false);
     showWorkEx(false);
     showfreeResUK(false);
   };
@@ -90,7 +115,17 @@ export default function NavigationSide() {
     showappStat(false);
     showWorkEx(true);
     showfreeResUK(false);
+    showInterviews(false);
   };
+
+  // const handleFreeResUK = () => {
+  //   showUcat(false);
+  //   showpersonalStatement(false);
+  //   showappStat(false);
+  //   showWorkEx(false);
+  //   showfreeResUK(true);
+  // };
+
   // const handleFreeResources = () => {
   //   showHpat(false);
   //   showHpatTutor(false);
@@ -100,12 +135,13 @@ export default function NavigationSide() {
 
   useEffect(() => {}, [hpat]);
   useEffect(() => {}, [hpatTutor]);
-  useEffect(() => {}, [leaveCert]);
   useEffect(() => {}, [freeRes]);
+  useEffect(() => {}, [leaveCert]);
   useEffect(() => {}, [ucat]);
   useEffect(() => {}, [personalStatement]);
   useEffect(() => {}, [appStat]);
   useEffect(() => {}, [workEx]);
+  useEffect(() => {}, [interview]);
   useEffect(() => {}, [freeResUK]);
   useEffect(() => {}, [region]);
 
@@ -268,7 +304,7 @@ export default function NavigationSide() {
                 setModalVisible(false);
               }}
             >
-              <View style={{ marginTop: 2 }}>
+              <View style={{ marginTop: 10 }}>
                 <Text style={styles.headerText}>UCAT Tutoring</Text>
               </View>
             </TouchableOpacity>
@@ -282,38 +318,26 @@ export default function NavigationSide() {
                 <Text style={styles.headerText}>UCAT Courses</Text>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => {
-                navigation.navigate(RoutePath.HPATCHANGES as never);
-                setModalVisible(false);
-              }}
-            >
-              <View style={{ marginTop: 10 }}>
-                <Text style={styles.headerText}>
-                  UCAT Daily Study Timetable
-                </Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => {
-                navigation.navigate(RoutePath.HPATCHANGES as never);
-                setModalVisible(false);
-              }}
-            >
-              <View style={{ marginTop: 10 }}>
-                <Text style={styles.headerText}>UCAT Score Calculation</Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => {
-                navigation.navigate(RoutePath.HPATCHANGES as never);
-                setModalVisible(false);
-              }}
-            >
-              <View style={{ marginTop: 10 }}>
-                <Text style={styles.headerText}>UCAT 2025 Stats</Text>
-              </View>
-            </TouchableOpacity>
+            <View style={{ marginTop: 10 }}>
+              <PdfLink
+                label="UCAT Daily Study Timetable"
+                pdfPath="pdfs/UCAT_Daily_Study_Timetable.pdf"
+              />
+            </View>
+
+            <View style={{ marginTop: 10 }}>
+              <PdfLink
+                label="UCAT Score Calculation"
+                pdfPath="pdfs/UCAT_Score_Calculation.pdf"
+              />
+            </View>
+
+            <View style={{ marginTop: 10 }}>
+              <PdfLink
+                label="UCAT 2025 Stats"
+                pdfPath="pdfs/UCAT_2025_Stats.pdf"
+              />
+            </View>
           </View>
         )}
         <TouchableOpacity onPress={() => handlePersonalStatement()}>
@@ -325,7 +349,7 @@ export default function NavigationSide() {
           <View style={{ marginTop: -25, marginLeft: 20 }}>
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate(RoutePath.GROUPPREP as never);
+                navigation.navigate(RoutePath.PERSONALGUIDANCE as never);
                 setModalVisible(false);
               }}
             >
@@ -337,7 +361,7 @@ export default function NavigationSide() {
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate(RoutePath.WEEKPREP as never);
+                navigation.navigate(RoutePath.PERSONALREVIEW as never);
                 setModalVisible(false);
               }}
             >
@@ -347,7 +371,7 @@ export default function NavigationSide() {
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate(RoutePath.WEEKPREP as never);
+                navigation.navigate(RoutePath.PERSONALFAQ as never);
                 setModalVisible(false);
               }}
             >
@@ -366,7 +390,7 @@ export default function NavigationSide() {
           <View style={{ marginTop: -25, marginLeft: 20 }}>
             <TouchableOpacity
               onPress={() => {
-                (navigation.navigate(RoutePath.LEAVINGCERT as never),
+                (navigation.navigate(RoutePath.APPLICATIONSTRATEGY as never),
                   setModalVisible(false));
               }}
             >
@@ -376,12 +400,51 @@ export default function NavigationSide() {
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() => {
-                (navigation.navigate(RoutePath.JUNIORCERT as never),
+                (navigation.navigate(RoutePath.UCASEXTRA as never),
                   setModalVisible(false));
               }}
             >
               <View style={{ marginTop: 10 }}>
                 <Text style={styles.headerText}>What is UCAS Extra </Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        )}
+        <TouchableOpacity onPress={() => handleInterviews()}>
+          <View>
+            <Text style={styles.headerText}>Interviews</Text>
+          </View>
+        </TouchableOpacity>
+        {interview && (
+          <View style={{ marginTop: -25, marginLeft: 20 }}>
+            <TouchableOpacity
+              onPress={() => {
+                (navigation.navigate(RoutePath.MMI as never),
+                  setModalVisible(false));
+              }}
+            >
+              <View style={{ marginTop: 2 }}>
+                <Text style={styles.headerText}>Medicinal Mock Interview</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => {
+                (navigation.navigate(RoutePath.OXBRIDGE as never),
+                  setModalVisible(false));
+              }}
+            >
+              <View style={{ marginTop: 10 }}>
+                  <Text style={styles.headerText}>OxBridge Medicine Interview</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => {
+                (navigation.navigate(RoutePath.PANEL as never),
+                  setModalVisible(false));
+              }}
+            >
+              <View style={{ marginTop: 10 }}>
+             <Text style={styles.headerText}>Medical Panel Interview</Text>
               </View>
             </TouchableOpacity>
           </View>
@@ -393,19 +456,13 @@ export default function NavigationSide() {
         </TouchableOpacity>
         {workEx && (
           <View style={{ marginTop: -25, marginLeft: 20 }}>
+            <PdfLink
+              label="WEX Requirements by Unis"
+              pdfPath="pdfs/Wex_Requirements_by_Unis.pdf"
+            />
             <TouchableOpacity
               onPress={() => {
-                (navigation.navigate(RoutePath.LEAVINGCERT as never),
-                  setModalVisible(false));
-              }}
-            >
-              <View style={{ marginTop: 2 }}>
-                <Text style={styles.headerText}>WEX Requirements by Unis</Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => {
-                (navigation.navigate(RoutePath.JUNIORCERT as never),
+                (navigation.navigate(RoutePath.WORKEX as never),
                   setModalVisible(false));
               }}
             >
