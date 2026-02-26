@@ -23,6 +23,8 @@ import MMIContainer from "../website/courses/ukCourses/Interviews/MMI";
 import oxBridgeContainer from "../website/courses/ukCourses/Interviews/oxBridge";
 import PanelContainer from "../website/courses/ukCourses/Interviews/panel";
 import WorkExContainer from "../website/courses/ukCourses/Work Experience/workEx";
+import UCATCoursesContainer from "../website/courses/ukCourses/UCAT Tutoring/ucatCourses";
+import PersonalReviewContainer from "../website/courses/ukCourses/Personal Statement/personalReview";
 
 type RootStackParamList = {
   [RoutePath.Home]: undefined;
@@ -34,6 +36,7 @@ type RootStackParamList = {
   [RoutePath.LEAVINGCERT]: undefined;
   [RoutePath.JUNIORCERT]: undefined;
   [RoutePath.UCATTUTOR]: undefined;
+  [RoutePath.UCATCOURSES]: undefined;
   [RoutePath.PERSONALGUIDANCE]: undefined;
   [RoutePath.PERSONALREVIEW]: undefined;
   [RoutePath.PERSONALFAQ]: undefined;
@@ -106,8 +109,16 @@ const RootStack = () => {
           component={UCATGroupPrepContainer}
         />
         <Stack.Screen
+          name={RoutePath.UCATCOURSES}
+          component={UCATCoursesContainer}
+        />
+        <Stack.Screen
           name={RoutePath.PERSONALGUIDANCE}
           component={PersonalGuidanceContainer}
+        />
+         <Stack.Screen
+          name={RoutePath.PERSONALREVIEW}
+          component={PersonalReviewContainer}
         />
         <Stack.Screen
           name={RoutePath.PERSONALFAQ}
@@ -124,7 +135,7 @@ const RootStack = () => {
         <Stack.Screen name={RoutePath.MMI} component={MMIContainer} />
         <Stack.Screen name={RoutePath.OXBRIDGE} component={oxBridgeContainer} />
         <Stack.Screen name={RoutePath.PANEL} component={PanelContainer} />
-             <Stack.Screen name={RoutePath.WORKEX} component={WorkExContainer} />
+        <Stack.Screen name={RoutePath.WORKEX} component={WorkExContainer} />
         {/* Optional catch-all */}
         {/* <Stack.Screen name="NotFound" component={Home} /> */}
       </Stack.Navigator>

@@ -373,7 +373,7 @@ export default function NavigationTop() {
             </View>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => navigation.navigate(RoutePath.JUNIORCERT as never)}
+            onPress={() => navigation.navigate(RoutePath.UCATCOURSES as never)}
           >
             <View style={{ marginTop: 2, marginBottom: 2 }}>
               <Text style={styles.headerText}>UCAT Courses</Text>
@@ -400,7 +400,7 @@ export default function NavigationTop() {
             </View>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => navigation.navigate(RoutePath.JUNIORCERT as never)}
+            onPress={() => navigation.navigate(RoutePath.PERSONALREVIEW as never)}
           >
             <View style={{ marginTop: 2, marginBottom: 2 }}>
               <Text style={styles.headerText}>Personal Statement Review</Text>
