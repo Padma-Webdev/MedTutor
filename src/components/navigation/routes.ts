@@ -18,4 +18,5 @@ export enum RoutePath {
   OXBRIDGE="oxbridge",
   MEDICINALPANEL="medicinal-panel",
     PANEL="panel",
+    WORKEX="work-experience",
 }

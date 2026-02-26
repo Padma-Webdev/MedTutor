@@ -22,6 +22,7 @@ import applicationStrategyContainer from "../website/courses/ukCourses/Applicati
 import MMIContainer from "../website/courses/ukCourses/Interviews/MMI";
 import oxBridgeContainer from "../website/courses/ukCourses/Interviews/oxBridge";
 import PanelContainer from "../website/courses/ukCourses/Interviews/panel";
+import WorkExContainer from "../website/courses/ukCourses/Work Experience/workEx";
 
 type RootStackParamList = {
   [RoutePath.Home]: undefined;
@@ -41,7 +42,8 @@ type RootStackParamList = {
   [RoutePath.MMI]: undefined;
   [RoutePath.OXBRIDGE]: undefined;
   [RoutePath.MEDICINALPANEL]: undefined;
-    [RoutePath.PANEL]: undefined;
+  [RoutePath.PANEL]: undefined;
+  [RoutePath.WORKEX]: undefined;
   Courses: undefined;
   Hero: undefined;
   Navigation: undefined;
@@ -119,18 +121,10 @@ const RootStack = () => {
           name={RoutePath.APPLICATIONSTRATEGY}
           component={applicationStrategyContainer}
         />
-        <Stack.Screen
-          name={RoutePath.MMI}
-          component={MMIContainer}
-        />
-        <Stack.Screen
-          name={RoutePath.OXBRIDGE}
-          component={oxBridgeContainer}
-        />
-        <Stack.Screen
-          name={RoutePath.PANEL}
-          component={PanelContainer}
-        />
+        <Stack.Screen name={RoutePath.MMI} component={MMIContainer} />
+        <Stack.Screen name={RoutePath.OXBRIDGE} component={oxBridgeContainer} />
+        <Stack.Screen name={RoutePath.PANEL} component={PanelContainer} />
+             <Stack.Screen name={RoutePath.WORKEX} component={WorkExContainer} />
         {/* Optional catch-all */}
         {/* <Stack.Screen name="NotFound" component={Home} /> */}
       </Stack.Navigator>

@@ -465,7 +465,7 @@ export default function NavigationTop() {
             pdfPath="pdfs/Wex_Requirements_by_Unis.pdf"
           />
           <TouchableOpacity
-            onPress={() => navigation.navigate(RoutePath.JUNIORCERT as never)}
+            onPress={() => navigation.navigate(RoutePath.WORKEX as never)}
           >
             <View style={{ marginTop: 2, marginBottom: 2 }}>
               <Text style={styles.headerText}>Why Work Experience?</Text>
