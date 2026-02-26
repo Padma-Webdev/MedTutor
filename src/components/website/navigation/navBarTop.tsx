@@ -418,7 +418,7 @@ export default function NavigationTop() {
       {appStat && (
         <View style={styles.appStatDropDownView}>
           <TouchableOpacity
-            onPress={() => navigation.navigate(RoutePath.LEAVINGCERT as never)}
+            onPress={() => navigation.navigate(RoutePath.APPLICATIONSTRATEGY as never)}
           >
             <View style={{ marginTop: 2, marginBottom: 2 }}>
               <Text style={styles.headerText}>Selecting 4 Unis</Text>

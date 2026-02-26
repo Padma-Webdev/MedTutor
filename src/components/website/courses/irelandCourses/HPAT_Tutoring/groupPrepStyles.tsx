@@ -72,11 +72,17 @@ export const groupStyles = StyleSheet.create({
     fontWeight: "bold",
     color: "#f8fefe",
     marginBottom: 10,
+    backgroundColor: "#112230",
+    padding: 5,
+    borderRadius: 8,
   },
   perSessionReg: {
     fontSize: 18,
     fontWeight: "bold",
     color: "#f8fefe",
+    backgroundColor: "#112230",
+    padding: 5,
+    borderRadius: 8,
     marginBottom: 10,
   },
   groupBoldCourse: {

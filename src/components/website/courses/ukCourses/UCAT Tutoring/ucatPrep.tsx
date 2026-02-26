@@ -252,7 +252,7 @@ export default function UCATGroupPrepContainer() {
             : {
                 flexDirection: "column",
                 width: "55%",
-                justifyContent: "space-around",
+                justifyContent: "space-evenly",
                 backgroundColor: "#080e19",
                 borderRadius: 15,
                 borderWidth: 2,
@@ -275,7 +275,6 @@ export default function UCATGroupPrepContainer() {
           style={{
             flexDirection: isSmallScreen ? "column" : "row",
             justifyContent: "space-around",
-            marginTop:15,
           }}
         >
           <View
@@ -431,7 +430,7 @@ export default function UCATGroupPrepContainer() {
                           height: 120,
                           borderRadius: 10,
                           marginBottom: 15,
-                          alignSelf:"center"
+                          alignSelf: "center",
                         }
                       : {
                           width: screenWidth * 0.15,
@@ -516,7 +515,9 @@ export default function UCATGroupPrepContainer() {
                 backgroundColor: "#080e19",
                 opacity: 0.3,
                 width: screenWidth,
-                height: isSmallScreen ? screenHeight * 1.16 : screenHeight * 1.35,
+                height: isSmallScreen
+                  ? screenHeight * 1.16
+                  : screenHeight * 1.35,
               }}
             />
             <View

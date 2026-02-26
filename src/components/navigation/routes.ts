@@ -12,5 +12,6 @@ export enum RoutePath {
   PERSONALGUIDANCE = "personal-guidance",
   PERSONALREVIEW = "personal-review",
   PERSONALFAQ = "personal-faqs",
-  UCASEXTRA="ucas-extra"
+  UCASEXTRA="ucas-extra",
+  APPLICATIONSTRATEGY="application-strategy",
 }
