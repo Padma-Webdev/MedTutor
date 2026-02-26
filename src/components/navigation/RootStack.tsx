@@ -14,6 +14,17 @@ import GroupPrepContainer from "../website/courses/irelandCourses/HPAT_Tutoring/
 import DayPrepContainer from "../website/courses/irelandCourses/HPAT_Tutoring/dayPrep";
 import LeavingCertContainer from "../website/courses/irelandCourses/JuniorCert/leavingCert";
 import JuniorCertificateChangeContainer from "../website/courses/irelandCourses/JuniorCert/juniorCert";
+import UCATGroupPrepContainer from "../website/courses/ukCourses/UCAT Tutoring/ucatPrep";
+import PersonalGuidanceContainer from "../website/courses/ukCourses/Personal Statement/personalGuidance";
+import PersonalFAQsContainer from "../website/courses/ukCourses/Personal Statement/personalFAQs";
+import UCASExtraContainer from "../website/courses/ukCourses/Application Strategy/UCASExtra";
+import applicationStrategyContainer from "../website/courses/ukCourses/Application Strategy/applicationStrategy";
+import MMIContainer from "../website/courses/ukCourses/Interviews/MMI";
+import oxBridgeContainer from "../website/courses/ukCourses/Interviews/oxBridge";
+import PanelContainer from "../website/courses/ukCourses/Interviews/panel";
+import WorkExContainer from "../website/courses/ukCourses/Work Experience/workEx";
+import UCATCoursesContainer from "../website/courses/ukCourses/UCAT Tutoring/ucatCourses";
+import PersonalReviewContainer from "../website/courses/ukCourses/Personal Statement/personalReview";
 
 type RootStackParamList = {
   [RoutePath.Home]: undefined;
@@ -24,6 +35,18 @@ type RootStackParamList = {
   [RoutePath.WEEKPREP]: undefined;
   [RoutePath.LEAVINGCERT]: undefined;
   [RoutePath.JUNIORCERT]: undefined;
+  [RoutePath.UCATTUTOR]: undefined;
+  [RoutePath.UCATCOURSES]: undefined;
+  [RoutePath.PERSONALGUIDANCE]: undefined;
+  [RoutePath.PERSONALREVIEW]: undefined;
+  [RoutePath.PERSONALFAQ]: undefined;
+  [RoutePath.UCASEXTRA]: undefined;
+  [RoutePath.APPLICATIONSTRATEGY]: undefined;
+  [RoutePath.MMI]: undefined;
+  [RoutePath.OXBRIDGE]: undefined;
+  [RoutePath.MEDICINALPANEL]: undefined;
+  [RoutePath.PANEL]: undefined;
+  [RoutePath.WORKEX]: undefined;
   Courses: undefined;
   Hero: undefined;
   Navigation: undefined;
@@ -32,9 +55,9 @@ type RootStackParamList = {
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-const linking: LinkingOptions<RootStackParamList>  = {
+const linking: LinkingOptions<RootStackParamList> = {
   prefixes: [process.env.EXPO_PUBLIC_BASE_URL ?? "/"],
-};;
+};
 
 const RootStack = () => {
   return (
@@ -44,11 +67,11 @@ const RootStack = () => {
         screenOptions={{
           headerShown: true,
           header: () => <Navigation />,
-          headerStyle: { backgroundColor: 'transparent' },
-          headerTintColor: 'white',
+          headerStyle: { backgroundColor: "transparent" },
+          headerTintColor: "white",
           headerTransparent: true,
-          headerTitle: '',
-          title: 'MedTutor',
+          headerTitle: "",
+          title: "MedTutor",
         }}
       >
         <Stack.Screen name={RoutePath.Home} component={Home} />
@@ -56,13 +79,63 @@ const RootStack = () => {
         <Stack.Screen name="Hero" component={HeroContainer} />
         <Stack.Screen name="Navigation" component={Navigation} />
         <Stack.Screen name="Contact-us" component={ContactUsContainer} />
-        <Stack.Screen name={RoutePath.ABOUTHPAT} component={AboutHPATContainer} />
-        <Stack.Screen name={RoutePath.HPATDATES} component={HPATDatesContainer} />
-        <Stack.Screen name={RoutePath.HPATCHANGES} component={HPATChangesContainer} />
-        <Stack.Screen name={RoutePath.GROUPPREP} component={GroupPrepContainer} />
+        <Stack.Screen
+          name={RoutePath.ABOUTHPAT}
+          component={AboutHPATContainer}
+        />
+        <Stack.Screen
+          name={RoutePath.HPATDATES}
+          component={HPATDatesContainer}
+        />
+        <Stack.Screen
+          name={RoutePath.HPATCHANGES}
+          component={HPATChangesContainer}
+        />
+        <Stack.Screen
+          name={RoutePath.GROUPPREP}
+          component={GroupPrepContainer}
+        />
         <Stack.Screen name={RoutePath.WEEKPREP} component={DayPrepContainer} />
-        <Stack.Screen name={RoutePath.LEAVINGCERT} component={LeavingCertContainer} />
-        <Stack.Screen name={RoutePath.JUNIORCERT} component={JuniorCertificateChangeContainer} />
+        <Stack.Screen
+          name={RoutePath.LEAVINGCERT}
+          component={LeavingCertContainer}
+        />
+        <Stack.Screen
+          name={RoutePath.JUNIORCERT}
+          component={JuniorCertificateChangeContainer}
+        />
+        <Stack.Screen
+          name={RoutePath.UCATTUTOR}
+          component={UCATGroupPrepContainer}
+        />
+        <Stack.Screen
+          name={RoutePath.UCATCOURSES}
+          component={UCATCoursesContainer}
+        />
+        <Stack.Screen
+          name={RoutePath.PERSONALGUIDANCE}
+          component={PersonalGuidanceContainer}
+        />
+         <Stack.Screen
+          name={RoutePath.PERSONALREVIEW}
+          component={PersonalReviewContainer}
+        />
+        <Stack.Screen
+          name={RoutePath.PERSONALFAQ}
+          component={PersonalFAQsContainer}
+        />
+        <Stack.Screen
+          name={RoutePath.UCASEXTRA}
+          component={UCASExtraContainer}
+        />
+        <Stack.Screen
+          name={RoutePath.APPLICATIONSTRATEGY}
+          component={applicationStrategyContainer}
+        />
+        <Stack.Screen name={RoutePath.MMI} component={MMIContainer} />
+        <Stack.Screen name={RoutePath.OXBRIDGE} component={oxBridgeContainer} />
+        <Stack.Screen name={RoutePath.PANEL} component={PanelContainer} />
+        <Stack.Screen name={RoutePath.WORKEX} component={WorkExContainer} />
         {/* Optional catch-all */}
         {/* <Stack.Screen name="NotFound" component={Home} /> */}
       </Stack.Navigator>

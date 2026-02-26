@@ -49,8 +49,8 @@ export default function DayPrepContainer() {
   const [showFAQs, setShowFAQs] = useState(false);
   const [buttononeState, setoneButtonState] = useState<ButtonState>("default");
   const [buttonCourseState, setCourseButtonState] = useState<ButtonState>("default");
-    const [buttonFAQState, setFAQButtonState] =
-      useState<ButtonState>("default");
+  const [buttonFAQState, setFAQButtonState] =
+    useState<ButtonState>("default");
   const [buttonGroupState, setgroupButtonState] =
     useState<ButtonState>("default");
 
@@ -63,14 +63,14 @@ export default function DayPrepContainer() {
     setoneButtonState("default");
   };
 
-      const handlePressCourse = (_: GestureResponderEvent) => {
-      setFAQButtonState("default");
-      setCourseButtonState("pressed");
-    };
-    const handlePressgFAQ= (_: GestureResponderEvent) => {
-      setFAQButtonState("pressed");
-      setCourseButtonState("default");
-    };
+  const handlePressCourse = (_: GestureResponderEvent) => {
+    setFAQButtonState("default");
+    setCourseButtonState("pressed");
+  };
+  const handlePressgFAQ = (_: GestureResponderEvent) => {
+    setFAQButtonState("pressed");
+    setCourseButtonState("default");
+  };
 
   const switchToGroup = () => {
     setGroupTutor(true);
@@ -78,7 +78,7 @@ export default function DayPrepContainer() {
   const switchToPersonal = () => {
     setGroupTutor(false);
   };
-  useEffect(() => {}, [groupTutor]);
+  useEffect(() => { }, [groupTutor]);
 
   const switchToFAQs = () => {
     setShowFAQs(true);
@@ -86,8 +86,8 @@ export default function DayPrepContainer() {
   const switchToCourse = () => {
     setShowFAQs(false);
   };
-  useEffect(() => {}, [groupTutor]);
-  useEffect(() => {}, [showFAQs]);
+  useEffect(() => { }, [groupTutor]);
+  useEffect(() => { }, [showFAQs]);
 
   const Header = () => {
     return (
@@ -117,20 +117,20 @@ export default function DayPrepContainer() {
           style={
             isSmallScreen
               ? {
-                  backgroundColor: "#2563EB",
-                  borderRadius: 10,
-                  padding: 5,
-                  width: "85%",
-                  alignSelf: "center",
-                }
+                backgroundColor: "#2563EB",
+                borderRadius: 10,
+                padding: 5,
+                width: "85%",
+                alignSelf: "center",
+              }
               : {
-                  backgroundColor: "#2563EB",
-                  borderRadius: 5,
-                  padding: 5,
-                  width: 400,
-                  alignSelf: "center",
-                  alignContent: "center",
-                }
+                backgroundColor: "#2563EB",
+                borderRadius: 5,
+                padding: 5,
+                width: 400,
+                alignSelf: "center",
+                alignContent: "center",
+              }
           }
           onPress={() => {
             Linking.openURL(
@@ -192,20 +192,20 @@ export default function DayPrepContainer() {
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
-          onPress={switchToGroup}
+            onPress={switchToGroup}
             onPressIn={handlePressWeekIn}
             style={[isSmallScreen
-                            ? personalStyles.personalTutorSmallScreen
-                            : personalStyles.personalTutor,{ backgroundColor: getButtonColor(buttonGroupState) },
-                        ]}
-                      
+              ? personalStyles.personalTutorSmallScreen
+              : personalStyles.personalTutor, { backgroundColor: getButtonColor(buttonGroupState) },
+            ]}
+
           >
             <Text
               style={
-                              [isSmallScreen
-                                ? personalStyles.button2TextSmallScreen
-                                : personalStyles.button2Text,{color:getTextColor(buttonGroupState)}]
-                            }
+                [isSmallScreen
+                  ? personalStyles.button2TextSmallScreen
+                  : personalStyles.button2Text, { color: getTextColor(buttonGroupState) }]
+              }
             >
               8 Week Course
             </Text>
@@ -257,15 +257,15 @@ export default function DayPrepContainer() {
           onPress={switchToCourse}
           onPressIn={handlePressCourse}
           style={[personalStyles.detailsButton1,
-                        { backgroundColor: getSecondButtonColor(buttonCourseState) },
-                      ]}
+          { backgroundColor: getSecondButtonColor(buttonCourseState) },
+          ]}
         >
           <Text
             style={
-                          [isSmallScreen
-                            ? personalStyles.buttonCourseTextSmallScreen
-                            : personalStyles.buttonCourseText
-                        ,{ color: getTextColor(buttonCourseState) },]}
+              [isSmallScreen
+                ? personalStyles.buttonCourseTextSmallScreen
+                : personalStyles.buttonCourseText
+                , { color: getTextColor(buttonCourseState) },]}
           >
             Course Content
           </Text>
@@ -273,12 +273,12 @@ export default function DayPrepContainer() {
         <TouchableOpacity
           onPress={switchToFAQs}
 
-        onPressIn={handlePressgFAQ}
+          onPressIn={handlePressgFAQ}
           style={[personalStyles.detailsButton1,
-                        { backgroundColor: getSecondButtonColor(buttonFAQState) },
-                      ]}
+          { backgroundColor: getSecondButtonColor(buttonFAQState) },
+          ]}
         >
-          <Text style={[personalStyles.buttonCourseText2,{ color: getTextColor(buttonFAQState) },]}>FAQs</Text>
+          <Text style={[personalStyles.buttonCourseText2, { color: getTextColor(buttonFAQState) },]}>FAQs</Text>
         </TouchableOpacity>
       </View>
     );

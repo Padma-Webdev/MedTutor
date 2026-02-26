@@ -39,6 +39,7 @@ export const groupStyles = StyleSheet.create({
     color: "#f8fefe",
     marginBottom: 10,
     marginLeft: 35,
+    
   },
   groupBodySmallScreen: {
     fontSize: 17,
@@ -53,6 +54,13 @@ export const groupStyles = StyleSheet.create({
     marginBottom: 10,
     marginLeft: 45,
   },
+  groupUCATHeader: {
+    fontSize: 15,
+    fontWeight: "bold",
+    color: "#f8fefe",
+    marginBottom: 10,
+    marginLeft: 35,
+  },
   groupBoldHeaderSmallScreen: {
     fontSize: 15,
     fontWeight: "bold",
@@ -65,11 +73,17 @@ export const groupStyles = StyleSheet.create({
     fontWeight: "bold",
     color: "#f8fefe",
     marginBottom: 10,
+    backgroundColor: "#112230",
+    padding: 5,
+    borderRadius: 8,
   },
-    perSessionReg: {
+  perSessionReg: {
     fontSize: 18,
     fontWeight: "bold",
     color: "#f8fefe",
+    backgroundColor: "#112230",
+    padding: 5,
+    borderRadius: 8,
     marginBottom: 10,
   },
   groupBoldCourse: {
@@ -168,13 +182,16 @@ export const groupStyles = StyleSheet.create({
   pricingNextLine: {
     fontSize: 15,
     color: "#f8fefe",
+    fontWeight: "700",
     marginBottom: 5,
     marginLeft: 50,
+    marginRight: "2%" 
   },
   pricingNextLineSmallScreen: {
     fontSize: 15,
     color: "#f8fefe",
     marginBottom: 5,
+    fontWeight: "700",
     marginLeft: 20,
   },
 });
