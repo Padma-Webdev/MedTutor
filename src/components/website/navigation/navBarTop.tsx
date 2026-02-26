@@ -436,14 +436,14 @@ export default function NavigationTop() {
       {interview && (
         <View style={styles.interviewDropDownView}>
           <TouchableOpacity
-            onPress={() => navigation.navigate(RoutePath.LEAVINGCERT as never)}
+            onPress={() => navigation.navigate(RoutePath.MMI as never)}
           >
             <View style={{ marginTop: 2, marginBottom: 2 }}>
               <Text style={styles.headerText}>Medicinal Mock Interview</Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => navigation.navigate(RoutePath.JUNIORCERT as never)}
+            onPress={() => navigation.navigate(RoutePath.OXBRIDGE as never)}
           >
             <View style={{ marginTop: 2, marginBottom: 2 }}>
               <Text style={styles.headerText}>OxBridge Medicine Interview</Text>

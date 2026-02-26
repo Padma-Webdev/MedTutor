@@ -55,6 +55,13 @@ export const JuniorStyles = StyleSheet.create({
     marginBottom: 10,
     marginLeft: "5%",
   },
+  omi:{
+              fontSize: 17,
+              fontWeight: "400",
+              color: "#f8fefe",
+              marginBottom: 10,
+              marginLeft: "12%",
+            },
   hpatDesc2: {
     fontSize: 18,
     color: "#f8fefe",
