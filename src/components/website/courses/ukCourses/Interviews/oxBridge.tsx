@@ -18,9 +18,8 @@ export default function MMIContainer() {
   const screenWidth = Dimensions.get("window").width;
   const isSmallScreen = screenWidth < 740;
   const image = {
-    uri: "https://images.pexels.com/photos/33265684/pexels-photo-33265684.jpeg?_gl=1*13a9ztk*_ga*MjEyMzczNTM1Ny4xNzY2MDgyMzEw*_ga_8JE65Q40S6*czE3NjgzMjgxMjIkbzYkZzEkdDE3NjgzMjgzNzIkajE4JGwwJGgw",
+    uri: "https://images.pexels.com/photos/35531445/pexels-photo-35531445.jpeg?_gl=1*cj5i2w*_ga*MjEyMzczNTM1Ny4xNzY2MDgyMzEw*_ga_8JE65Q40S6*czE3NjgzMjgxMjIkbzYkZzEkdDE3NjgzMjkyNjckajUzJGwwJGgw",
   };
-
   const Header = () => {
     return (
       <View
@@ -78,6 +77,8 @@ export default function MMIContainer() {
             color: "#f8fefe",
             fontWeight: "400",
             marginBottom: 10,
+            width:isSmallScreen?"95%":"60%",
+            alignSelf:"center",
             marginLeft: isSmallScreen ? 10 : 25,
           }}
         >

@@ -21,6 +21,7 @@ import UCASExtraContainer from "../website/courses/ukCourses/Application Strateg
 import applicationStrategyContainer from "../website/courses/ukCourses/Application Strategy/applicationStrategy";
 import MMIContainer from "../website/courses/ukCourses/Interviews/MMI";
 import oxBridgeContainer from "../website/courses/ukCourses/Interviews/oxBridge";
+import PanelContainer from "../website/courses/ukCourses/Interviews/panel";
 
 type RootStackParamList = {
   [RoutePath.Home]: undefined;
@@ -40,6 +41,7 @@ type RootStackParamList = {
   [RoutePath.MMI]: undefined;
   [RoutePath.OXBRIDGE]: undefined;
   [RoutePath.MEDICINALPANEL]: undefined;
+    [RoutePath.PANEL]: undefined;
   Courses: undefined;
   Hero: undefined;
   Navigation: undefined;
@@ -124,6 +126,10 @@ const RootStack = () => {
         <Stack.Screen
           name={RoutePath.OXBRIDGE}
           component={oxBridgeContainer}
+        />
+        <Stack.Screen
+          name={RoutePath.PANEL}
+          component={PanelContainer}
         />
         {/* Optional catch-all */}
         {/* <Stack.Screen name="NotFound" component={Home} /> */}

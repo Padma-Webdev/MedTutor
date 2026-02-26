@@ -17,4 +17,5 @@ export enum RoutePath {
   MMI="mmi",
   OXBRIDGE="oxbridge",
   MEDICINALPANEL="medicinal-panel",
+    PANEL="panel",
 }
