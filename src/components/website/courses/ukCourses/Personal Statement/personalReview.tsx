@@ -261,7 +261,7 @@ export default function PersonalReviewContainer() {
           </Text>
         </TouchableOpacity>
         <PdfLink
-          label="Click to View Sample Personal Statement"
+          label="Click to View Sample Personal Statement Review"
           pdfPath="pdfs/SampleQuestion.pdf"
         />
       </View>

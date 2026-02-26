@@ -3,7 +3,6 @@ import { groupStyles } from "../../irelandCourses/HPAT_Tutoring/groupPrepStyles"
 
 export const UCATPersonalisedTutoring = () => {
   const screenWidth = Dimensions.get("window").width;
-  const screenHeight = Dimensions.get("window").height;
   const isSmallScreen = screenWidth < 740;
 
   return (

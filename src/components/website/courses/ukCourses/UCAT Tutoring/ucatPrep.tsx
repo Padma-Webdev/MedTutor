@@ -61,6 +61,7 @@ export default function UCATGroupPrepContainer() {
   const [buttonCourseState, setCourseButtonState] =
     useState<ButtonState>("default");
   const [buttonFAQState, setFAQButtonState] = useState<ButtonState>("default");
+  
   const BASE_URL = process.env.PUBLIC_URL || "."; // empty in dev, repo prefix in prod
 
   const handlePressOneIn = (_: GestureResponderEvent) => {
@@ -218,18 +219,16 @@ export default function UCATGroupPrepContainer() {
           isSmallScreen
             ? personalStyles.courseViewSmallScreen
             : {
-                width: "49%",
+                width: "50%",
                 alignSelf: "center",
                 padding: 15,
                 height: "100%",
                 borderRadius: 15,
                 borderWidth: 2,
                 borderColor: "#23CFBB",
-                backgroundColor: "#080e19",
               }
         }
-      >
-        <View style={personalStyles.headerOpactiy} />
+      > <View style={personalStyles.headerOpactiy} />
         {!groupTutor ? UCATPersonalisedTutoring() : UCATSmallGroupTutoring()}
       </View>
     );
@@ -247,30 +246,14 @@ export default function UCATGroupPrepContainer() {
                 borderRadius: 15,
                 borderWidth: 2.5,
                 borderColor: "#23CFBB",
-                backgroundColor: "#080e19",
               }
             : {
                 flexDirection: "column",
-                width: "55%",
-                justifyContent: "space-evenly",
-                backgroundColor: "#080e19",
-                borderRadius: 15,
-                borderWidth: 2,
-                marginLeft: "2%",
-                borderColor: "#23CFBB",
+                width: "50%",
+                marginLeft: "1%",
               }
         }
       >
-        <Text
-          style={{
-            color: "white",
-            fontSize: 23,
-            fontWeight: "bold",
-            alignSelf: "center",
-          }}
-        >
-          Our Tutors
-        </Text>
         <View
           style={{
             flexDirection: isSmallScreen ? "column" : "row",
@@ -298,7 +281,7 @@ export default function UCATGroupPrepContainer() {
                     borderColor: "#23CFBB",
                   }
             }
-          >
+          ><View style={personalStyles.headerOpactiy} />
             <View
               style={
                 isSmallScreen
@@ -326,19 +309,19 @@ export default function UCATGroupPrepContainer() {
                     isSmallScreen
                       ? {
                           width: "70%",
-                          height: 120,
+                          height: 220,
                           borderRadius: 10,
                           marginBottom: 15,
                           alignSelf: "center",
                         }
                       : {
-                          width: screenWidth * 0.15,
-                          height: 150,
+                          width: 217,
+                          height: 220,
                           margin: 10,
                           borderRadius: 10,
                         }
                   }
-                  source={{ uri: `${BASE_URL}/images/anjali.jpeg` }}
+                  source={{ uri: `${BASE_URL}/images/anjaliSmall.jpeg` }}
                 />
               </View>
               <View>
@@ -350,7 +333,7 @@ export default function UCATGroupPrepContainer() {
                     alignSelf: "center",
                   }}
                 >
-                  Anjali Bachetta
+                  Tutor:  Anjali Bachetta
                 </Text>
               </View>
               <View style={{ margin: 10, marginLeft: 20 }}>
@@ -401,6 +384,7 @@ export default function UCATGroupPrepContainer() {
                   }
             }
           >
+            <View style={personalStyles.headerOpactiy} />
             <View
               style={
                 isSmallScreen
@@ -433,8 +417,8 @@ export default function UCATGroupPrepContainer() {
                           alignSelf: "center",
                         }
                       : {
-                          width: screenWidth * 0.15,
-                          height: 150,
+                          width: 217,
+                          height: 220,
                           margin: 10,
                           borderRadius: 10,
                         }
@@ -451,7 +435,7 @@ export default function UCATGroupPrepContainer() {
                     alignSelf: "center",
                   }}
                 >
-                  Branavi Yogathasan
+                  Tutor:  Branavi Yogathasan
                 </Text>
                 <View style={{ margin: 10 }}>
                   <Text style={{ color: "white", fontSize: 13 }}>
@@ -501,7 +485,7 @@ export default function UCATGroupPrepContainer() {
             style={{
               flex: 1,
               width: screenWidth,
-              height: isSmallScreen ? screenHeight * 1.16 : screenHeight * 1.35,
+              height: isSmallScreen ? screenHeight * 2.6 : screenHeight * 1.35,
             }}
           >
             <View
@@ -516,7 +500,7 @@ export default function UCATGroupPrepContainer() {
                 opacity: 0.3,
                 width: screenWidth,
                 height: isSmallScreen
-                  ? screenHeight * 1.16
+                  ? screenHeight * 2.6
                   : screenHeight * 1.35,
               }}
             />
@@ -534,7 +518,7 @@ export default function UCATGroupPrepContainer() {
             <View
               style={{
                 flexDirection: isSmallScreen ? "column" : "row",
-                width: "85%",
+                width: isSmallScreen?"90%":"73%",
                 height: "50%",
                 alignSelf: "center",
                 marginTop: "1%",

@@ -151,7 +151,7 @@ export default function MMIContainer() {
               marginTop: "0.5%",
             }}
           >
-            Why Oxbridge Interviews Are Different?
+            {"\u25BA"}Why Oxbridge Interviews Are Different?
           </Text>
         </TouchableOpacity>
         {quest1 &&(<View>
@@ -231,7 +231,7 @@ export default function MMIContainer() {
             marginTop: "1%",
           }}
         >
-          What Interviewers Are Looking For?
+          {"\u25BA"}What Interviewers Are Looking For?
         </Text>
          </TouchableOpacity>
         {quest2 &&(<View>

@@ -243,7 +243,7 @@ export default function UCATCoursesContainer() {
         <View style={{marginBottom:isSmallScreen? 1:"16.5%",
         }}>
         <PdfLink
-          label="Click to View Sample Personal Statement"
+          label="Click to View 1 Day Course Schedule"
           pdfPath="pdfs/1-Day_Schedule.pdf"
         />
         </View>
@@ -414,7 +414,7 @@ export default function UCATCoursesContainer() {
           </Text>
         </View>{" "}
         <PdfLink
-          label="Click to View Sample Personal Statement"
+          label="Click to View 8 Week Course Schedule"
           pdfPath="pdfs/8_Week_Course_Schedule.pdf"
         />
       </View>
