@@ -55,7 +55,7 @@ export default function TutorsContainer() {
                       marginBottom: 15,
                     }
                   : {
-                      width: screenWidth * 0.195,
+                      width: screenWidth * 0.155,
                       height: 350,
                       margin: 10,
                       borderRadius: 10,
@@ -127,7 +127,91 @@ export default function TutorsContainer() {
                       marginBottom: 15,
                     }
                   : {
-                      width: screenWidth * 0.195,
+                      width: screenWidth * 0.155,
+                      height: 350,
+                      margin: 10,
+                      borderRadius: 10,
+                    }
+              }
+              source={{ uri: `${BASE_URL}/images/hasini.jpeg` }}
+            />
+          </View>
+          <View>
+            <Text
+              style={{
+                color: "white",
+                fontSize: 23,
+                fontWeight: "bold",
+                alignSelf: "center",
+              }}
+            >
+              Abby Murphy
+            </Text>
+          </View>
+          <View style={{ margin: 10, marginLeft: 20 }}>
+            <Text style={{ color: "white", fontSize: 15 }}>
+              {"\u2022"} {"Medicine offer holder at the University of Southampton"}
+            </Text>
+            <Text style={{ color: "white", fontSize: 15 }}>
+              {"\u2022"}{" "}
+              {
+                "Top 20% in both HPAT and UCAT, with UCAT SJT Band 1."
+              }
+            </Text>
+            <Text style={{ color: "white", fontSize: 15 }}>
+              {"\u2022"}{" "}
+              {"99% in Leaving Cert Biology and a Distinction in Junior Cert Science."}
+            </Text>
+            <Text style={{ color: "white", fontSize: 15 }}>
+              {"\u2022"}{" "}
+              {
+                "Interviewed at 4 UK medical schools and received 3 offers."
+              }
+            </Text>
+            <Text style={{ color: "white", fontSize: 15 }}>
+              {"\u2022"}{" "}
+              {
+                "Experienced in tutoring MMIs and medical school interviews."
+              }
+            </Text>
+            <Text style={{ color: "white", fontSize: 15 }}>
+              {"\u2022"}{" "}
+              {
+                "Helping UK and Irish students with medicine applications and personal statements."
+              }
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            isSmallScreen
+              ? {
+                  flex: 1,
+                  backgroundColor: "#080e19",
+                  marginBottom: 10,
+                  width: "95%",
+                  padding: 20,
+                  borderRadius: 15,
+                  borderWidth: 1,
+                  borderColor: "#06443e",
+                  justifyContent: "space-around",
+                  flexDirection: "column",
+                }
+              : courseStyles.courseTileT
+          }
+        >
+             <View style={isSmallScreen ? null :{alignSelf:"center",marginTop:10}}>
+            <Image
+              style={
+                isSmallScreen
+                  ? {
+                      width: "100%",
+                      height: 300,
+                      borderRadius: 10,
+                      marginBottom: 15,
+                    }
+                  : {
+                      width: screenWidth * 0.155,
                       height: 350,
                       borderRadius: 5,
                       margin: 10,
@@ -197,7 +281,7 @@ export default function TutorsContainer() {
                       marginBottom: 15,
                     }
                   : {
-                      width: screenWidth * 0.195,
+                      width: screenWidth * 0.155,
                       height: 350,
                       margin: 10,
                       borderRadius: 10,
@@ -270,7 +354,7 @@ export default function TutorsContainer() {
                       marginBottom: 15,
                     }
                   : {
-                      width: screenWidth * 0.195,
+                      width: screenWidth * 0.155,
                       height: 350,
                       margin: 10,
                       borderRadius: 10,

@@ -83,7 +83,7 @@ export default function ContactUsContainer() {
             <Phone style={contactStyles.iconStyle} />
             <Text style={contactStyles.titleText}>Call Us</Text>
             <Text style={contactStyles.subTitle}>Mon-Fri from 8am to 6pm</Text>
-            <Text style={contactStyles.infoText}>+353 874 099759</Text>
+            <Text style={contactStyles.infoText}>+353 852 133603</Text>
           </View>
         </View>
 
