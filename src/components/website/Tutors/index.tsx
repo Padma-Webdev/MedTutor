@@ -174,12 +174,12 @@ export default function TutorsContainer() {
                 "Experienced in tutoring MMIs and medical school interviews."
               }
             </Text>
-            <Text style={{ color: "white", fontSize: 15 }}>
+            {/* <Text style={{ color: "white", fontSize: 15 }}>
               {"\u2022"}{" "}
               {
                 "Helping UK and Irish students with medicine applications and personal statements."
               }
-            </Text>
+            </Text> */}
           </View>
         </View>
         <View
