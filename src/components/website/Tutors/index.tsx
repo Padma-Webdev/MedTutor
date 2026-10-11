@@ -145,7 +145,7 @@ export default function TutorsContainer() {
                 alignSelf: "center",
               }}
             >
-              Abby Murphy
+              Hasini Amba
             </Text>
           </View>
           <View style={{ margin: 10, marginLeft: 20 }}>
